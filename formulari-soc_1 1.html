@@ -1,0 +1,1396 @@
+<!doctype html>
+<html lang="ca">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Sol·licitud de subvencions destinades a la realització de contractes formatius per a l'obtenció de pràctica professional, per a entitats privades. 2026</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;1,400&family=Lato:wght@400;700&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;font-family:'Open Sans',Arial,Helvetica,sans-serif;color:#333;background:#fff;font-size:15px;line-height:1.4}
+[hidden]{display:none!important}
+button{font-family:inherit;cursor:pointer}
+input,select,textarea{font-family:inherit}
+.screen{min-height:100vh}
+.in{max-width:1170px;margin:0 auto;padding:0 15px}
+
+/* ===== Capçalera gencat ===== */
+.gc-top{background:#333;height:46px;color:#fff}
+.gc-top .in{height:100%;display:flex;align-items:center;justify-content:space-between}
+.gc-logo{display:flex;align-items:center;gap:3px;color:#fff;text-decoration:none;font:700 27px/1 Arial,Helvetica,sans-serif;letter-spacing:-.6px;padding-bottom:3px}
+.gc-logo svg{margin-top:3px}
+.gc-lang{font-weight:700;font-size:14px;display:flex;align-items:center;gap:10px;color:#fff}
+/* ===== Modals (capa) ===== */
+.ov{position:fixed;inset:0;background:rgba(0,0,0,.5);display:flex;align-items:flex-start;justify-content:center;z-index:50;padding:90px 15px 15px;overflow:auto}
+.dlg-x{position:absolute;right:14px;top:14px;background:none;border:0;padding:4px;line-height:0}
+
+/* ===== Plataforma de formularis ===== */
+.fp{background:#f5f5f5;min-height:calc(100vh - 46px);padding-bottom:60px}
+.fp-title{font-size:26px;line-height:1.45;color:#666;font-weight:400;margin:0;padding:22px 0 0}
+.pf-q{font-size:24px;font-weight:400;color:#333;margin:46px 0 30px;line-height:1.3}
+.pf-card{display:flex;align-items:center;justify-content:space-between;gap:20px;min-height:86px;background:#fff;box-shadow:0 2px 5px rgba(0,0,0,.13);padding:0 29px 0 44px;margin:0 0 20px;color:#c00000;font-size:18px;font-weight:600;text-decoration:none;cursor:pointer}
+.pf-card:hover span,.pf-card:focus-visible span{text-decoration:underline;text-underline-offset:3px}
+.pf-card:focus-visible{outline:2px solid #c00000;outline-offset:2px}
+.pf-card svg{flex:none}
+.acc-card{width:582px;max-width:100%;margin:46px auto 0;background:#fff;box-shadow:0 1px 4px rgba(0,0,0,.18);padding:24px 34px 24px;text-align:center}
+.acc-lock{width:66px;height:66px;border-radius:50%;background:#eee;margin:0 auto 14px;display:flex;align-items:center;justify-content:center}
+.acc-card h2{font-size:20px;font-weight:700;color:#000;margin:0 0 4px}
+.acc-card p{font-size:15px;line-height:1.5;color:#000;margin:0 auto;max-width:500px}
+.acc-card p a{color:#c00000;text-decoration:underline dotted;text-underline-offset:3px;cursor:pointer}
+.btn-accedeix{display:block;width:100%;height:39px;margin-top:100px;background:#c00000;color:#fff;border:0;border-radius:3px;font-size:14px;font-weight:700}
+.btn-accedeix:hover{background:#a40000}
+
+/* ===== Inici de sessió (idCAT) ===== */
+.lg{font-family:Arial,Helvetica,sans-serif;color:#212121;padding:20px 15px 60px}
+.lg h1{text-align:center;font-size:30px;font-weight:700;margin:0 0 42px}
+.lg-cols{display:flex;justify-content:center;max-width:780px;margin:0 auto}
+.lg-left{width:322px;padding-right:52px;border-right:1px solid #e5e5e5;box-sizing:content-box}
+.lg-right{width:318px;padding-left:56px;box-sizing:content-box}
+.idcat{display:flex;gap:6px;justify-content:center;margin:0 0 30px 0}
+.idcat-r{width:41px;height:65px;background:#f60014;color:#fff;display:flex;flex-direction:column;align-items:center;justify-content:center;font-weight:700;line-height:1}
+.idcat-r .a{font-size:27px;letter-spacing:-1px;margin-top:-2px}
+.idcat-r .b{font-size:12.5px;margin-top:3px}
+.idcat-g{position:relative;width:47px;height:30px;background:#3cd909;color:#fff;font-size:12.5px;display:flex;align-items:center;justify-content:center}
+.idcat-g::after{content:"";position:absolute;left:5px;bottom:-8px;border-left:0 solid transparent;border-right:9px solid transparent;border-top:8px solid #3cd909}
+.lg label{display:block;font-weight:700;font-size:16px;margin:0 0 8px}
+.lg-inp{display:block;width:100%;height:60px;border:1px solid #5f6365;border-radius:2px;padding:0 16px;font:17px Arial,Helvetica,sans-serif;color:#212121;margin-bottom:22px}
+.lg-inp::placeholder,.lg-tel input::placeholder{color:#555}
+.lg-tel{display:flex;border:1px solid #5f6365;border-radius:2px;height:60px;margin-bottom:28px}
+.lg-tel select{width:75px;border:0;border-right:1px solid #5f6365;padding:0 0 0 7px;font:17px Arial,Helvetica,sans-serif;color:#212121;background:#fff url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='5'%3E%3Cpath d='M0 0h8L4 5z' fill='%23555'/%3E%3C/svg%3E") no-repeat right 9px center;appearance:none;-webkit-appearance:none}
+.lg-tel input{flex:1;min-width:0;border:0;padding:0 12px;font:17px Arial,Helvetica,sans-serif;color:#212121}
+.lg-tel select:focus,.lg-tel input:focus,.lg-inp:focus{outline:2px solid #1a67a3;outline-offset:-2px}
+.btn-idcat{display:block;width:100%;height:58px;background:#009200;color:#fff;border:0;border-bottom:3px solid #006a00;border-radius:2px;font:700 17px Arial,Helvetica,sans-serif}
+.btn-idcat:hover{background:#007f00}
+.lg-alta{font-size:16px;margin-top:12px}
+.lg-alta a{color:#1a67a3;text-decoration:underline;cursor:pointer}
+.lg-right h2{text-align:center;font-size:22px;font-weight:700;color:#333;margin:5px 0 52px}
+.btn-sys{display:block;width:100%;height:58px;background:#e0e0e0;border:0;border-bottom:2px solid #8a8a8a;border-radius:2px;font:17px Arial,Helvetica,sans-serif;color:#212121;margin-bottom:18px}
+.btn-sys:hover{background:#d2d2d2}
+
+/* ===== Formulari ===== */
+.panel{background:#fff;margin-top:24px;padding:30px 40px 50px}
+.frm{max-width:1090px}
+.stepper{display:flex;gap:10px;margin:2px 0 0;flex-wrap:wrap}
+.stp{width:178px;display:flex;align-items:center;gap:9px;background:none;border:0;border-bottom:3px solid #9aa4ad;padding:0 0 12px;color:#9aa4ad;font-size:16px;text-align:left;cursor:default}
+.stp .n{width:28px;height:28px;border-radius:50%;border:1.5px solid currentColor;display:inline-flex;align-items:center;justify-content:center;font-size:16px;flex:none;line-height:1}
+.stp.visited{color:#666;border-bottom-color:#666;cursor:pointer}
+.stp.active{color:#d80000;border-bottom-color:#d80000}
+.step h1{font-size:36px;font-weight:400;color:#1f2226;margin:46px 0 22px;line-height:1.25}
+.h-sec{font-size:22px;font-weight:600;color:#333;border-bottom:2px solid #ccc;margin:0 0 14px;padding:0 4px 3px}
+.h-sec.mt{margin-top:22px}
+.h-blk{font-size:17px;font-weight:600;color:#333;margin:58px 0 48px}
+.h-blk.tight{margin-bottom:44px}
+.h-blk.mt0{margin-top:20px}
+.row{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));column-gap:26px}
+.c2{grid-column:span 2}.c3{grid-column:span 3}.c4{grid-column:span 4}.c6{grid-column:span 6}.c8{grid-column:span 8}.c12{grid-column:span 12}
+.c6.off6{grid-column:7 / span 6}
+.fld{margin:0 0 22px;position:relative}
+.lbl{display:block;font-size:16px;color:#333;margin:0 0 7px;line-height:1.35}
+.lbl.sm{font-size:14px}
+.req{color:#c00000}
+.lnk-dot{color:#c00000;text-decoration:underline dotted;text-underline-offset:3px}
+.inp{display:block;width:100%;height:44px;border:1px solid #ccc;border-radius:4px;padding:0 11px;font-size:14.5px;color:#000;background:#fff}
+.inp:focus,.ms-box.open{outline:none;border-color:#333;box-shadow:0 0 3px rgba(0,0,0,.35)}
+select.inp{appearance:none;-webkit-appearance:none;background:#fff url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='16' viewBox='0 0 10 16'%3E%3Cpath d='M5 1.5 9.6 6.4H.4z M5 14.5.4 9.6h9.2z' fill='%23333'/%3E%3C/svg%3E") no-repeat right 13px center;padding-right:34px;cursor:pointer}
+textarea.inp{height:80px;padding:8px 11px;resize:vertical;border-color:#8f8f8f;border-radius:3px;line-height:1.4}
+.ro{display:flex;align-items:center;min-height:44px;background:#f5f5f5;border-radius:4px;padding:6px 12px;font-size:14.5px;color:#111}
+.ro.b{font-weight:600;font-size:13.5px}
+.rad{display:flex;gap:38px;align-items:center;font-size:16px;padding-top:2px}
+.rad label{display:inline-flex;align-items:center;gap:8px;cursor:pointer}
+input[type=radio],input[type=checkbox]{accent-color:#1f1f1f;width:14px;height:14px;margin:0;cursor:pointer}
+.chk-line{display:inline-flex;align-items:center;gap:9px;font-size:16px;cursor:pointer}
+.help-q{display:inline-flex;width:15px;height:15px;border-radius:50%;background:#999;color:#fff;font-size:11px;font-weight:700;align-items:center;justify-content:center;margin-left:18px;vertical-align:3px;cursor:help}
+.fld.err{background:#fff4f4;border-left:3px solid #eb3832;margin-left:-13px;margin-right:-10px;padding:7px 10px 10px 10px}
+.err-msg{color:#c00000;font-size:13px;margin-top:5px}
+.alert-err{background:#fff4f4;border-left:3px solid #eb3832;color:#333;padding:12px 16px;margin:24px 0 0;font-size:14.5px}
+.draft-note{background:#f5f5f5;border-left:3px solid #999;padding:10px 14px;margin:0 0 20px;font-size:14px;color:#333;display:flex;flex-wrap:wrap;gap:6px 14px;align-items:center}
+.draft-note button{background:none;border:0;padding:0;color:#c00000;text-decoration:underline;font-size:14px}
+.nav{display:flex;justify-content:space-between;align-items:center;margin-top:84px}
+.btn-red{display:inline-flex;align-items:center;justify-content:center;gap:12px;background:#c00000;color:#fff;border:0;border-radius:2px;font-size:14px;height:35px;padding:0 15px 0 16px}
+.btn-red:hover{background:#a40000}
+.btn-red svg{flex:none}
+.btn-red.prev{padding:0 16px 0 14px}
+
+/* Pas 2 */
+.ms{position:relative}
+.ms-box{display:flex;align-items:center;height:44px;border:1px solid #ccc;border-radius:4px;padding:0 34px 0 11px;font-size:14.5px;background:#fff url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='16' viewBox='0 0 10 16'%3E%3Cpath d='M5 1.5 9.6 6.4H.4z M5 14.5.4 9.6h9.2z' fill='%23333'/%3E%3C/svg%3E") no-repeat right 13px center;cursor:pointer;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;color:#000;user-select:none}
+.ms-list{position:absolute;left:0;right:0;top:50px;background:#fff;border:1px solid #e3e3e3;z-index:5;padding:4px 0}
+.ms-opt{padding:6px 10px;font-size:13.5px;color:#222;cursor:pointer}
+.ms-opt:hover{background:#f0f0f0}
+.ms-opt.sel{background:#dcdcdc}
+.cons-txt{font-size:14.5px;line-height:1.5;color:#333;margin:0 0 6px}
+.h-accio{font-size:20px;font-weight:600;color:#333;margin:0}
+.accio{margin-top:46px}
+.accio-h{display:flex;justify-content:space-between;align-items:center}
+.accio-hr{border:0;border-top:2px solid #ccc;margin:42px 0 22px}
+.btn-del{background:#fff;color:#c00000;border:1px solid #c00000;border-radius:2px;font-size:13px;height:30px;padding:0 12px}
+.h-sub{font-size:15px;font-weight:600;color:#333;margin:12px 0 30px}
+.attrs{display:flex;justify-content:flex-end;align-items:center;gap:20px;font-size:16px;margin:30px 0 40px}
+.btn-gray{background:#d8d4d9;color:#333;border:0;border-radius:3px;height:44px;padding:0 18px;font-size:15px}
+.btn-afegir{height:44px;padding:0 19px;font-size:15px}
+.right{display:flex;justify-content:flex-end}
+
+/* Pas 3 */
+.decl-h{font-size:15.5px;font-weight:600;color:#666;line-height:1.6;margin:60px 0 0;padding:0 0 16px;border-bottom:3px solid #ccc;max-width:1090px}
+.decl-h span{display:block;max-width:820px}
+.tbl{width:100%;border-collapse:collapse;margin-top:20px;font-size:15px}
+.tbl thead{font-size:16px}
+.c1f{display:flex;align-items:center;gap:6px}
+.tbl th{background:#666;color:#fff;font-weight:400;text-align:left;padding:13px 22px;line-height:1.4;width:25%;height:66px}
+.tbl th.r,.tbl td.r{text-align:right;padding-right:28px}
+.tbl td{border:1px solid #e7e7e7;height:58px;padding:8px 12px;color:#333;vertical-align:middle}
+.tbl td.c1{padding-left:24px}
+.tbl .dash{color:#8db38d}
+.tbl .gbox{background:#f5f5f5;border-radius:4px;height:38px;display:flex;align-items:center;padding:0 12px}
+.ic-btn{background:none;border:0;padding:2px;line-height:0;vertical-align:middle}
+.c1 .ic-btn+.ic-btn{margin-left:6px}
+.c1 .cell-t{margin-left:30px}
+.iban-note{font-style:italic;font-size:16px;color:#333;margin:0 0 26px}
+.iban-box{text-transform:uppercase}
+.ex-box{position:relative;background:#f5f5f5;border-radius:4px;height:40px;display:flex;align-items:center;padding:0 10px;color:#678a63;font-size:13px;margin:-2px 0 24px}
+.ex-box .q{position:absolute;right:-1px;top:-9px;width:16px;height:16px;border-radius:50%;background:#b6b6b6;color:#fff;font-size:11px;font-weight:700;display:flex;align-items:center;justify-content:center}
+
+/* Pas 4 */
+.doc-intro{font-size:13.5px;margin:10px 0 20px}
+.doc{border-bottom:1px solid #ccc;padding:16px 0 10px}
+.doc:last-child{border-bottom:0}
+.doc .lbl{font-size:14px;font-weight:600;margin-bottom:12px;line-height:1.5}
+.fbox{display:flex;align-items:center;height:47px;border:1px solid #626262;border-radius:3px;padding:3px 3px 3px 12px;gap:10px}
+.fbox .file-name{flex:1;font-size:14px;color:#111;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.file-del{background:none;border:0;color:#666;font-size:20px;line-height:1;padding:0 4px}
+.btn-adj{height:39px;min-width:95px;background:#c00000;color:#fff;border:0;border-radius:2px;font-size:13px;padding:0 14px}
+.btn-adj:hover{background:#a40000}
+.doc .hint{font-size:12.5px;color:#595959;margin-top:5px}
+.doc.fld.err{margin-left:-13px;margin-right:-10px}
+
+/* Pas 5 */
+.h-decl{font-size:17px;font-weight:600;color:#333;margin:52px 0 46px}
+.p-decl{font-size:17px;color:#333;margin:0 0 5px}
+.chk-item{display:block;font-size:16px;line-height:1.5;text-align:justify;color:#333;margin:0 0 33px;cursor:pointer}
+.chk-item input{vertical-align:-1px;margin-right:9px}
+.chk-group{margin-top:40px}
+.p-txt{font-size:16px;line-height:1.5;text-align:justify;margin:0 0 33px}
+.lbl-ta{display:block;font-size:16px;margin:-12px 0 6px}
+.pd-row{display:flex;align-items:center;gap:9px;font-size:16px}
+.pd-tog{width:24px;height:24px;border-radius:50%;background:#c00000;border:0;padding:0;display:inline-flex;align-items:center;justify-content:center;margin-left:8px}
+.pd-tog svg{transition:transform .2s}
+.pd-tog[aria-expanded="true"] svg{transform:rotate(180deg)}
+.pd-info{margin:16px 0 0;border:1px solid #ddd;font-size:14px}
+.pd-info div{display:grid;grid-template-columns:200px 1fr;border-bottom:1px solid #ddd}
+.pd-info div:last-child{border-bottom:0}
+.pd-info b{background:#f5f5f5;padding:10px 14px;font-weight:600}
+.pd-info span{padding:10px 14px;line-height:1.5}
+.btn-desa{background:#fff;color:#e30000;border:1px solid #e30000;border-radius:9px;font-size:14px;font-weight:600;height:41px;padding:0 16px}
+.btn-desa:hover{background:#fff5f5}
+.warn{background:#fdf4bc;padding:20px 20px 24px 68px;position:relative;margin:23px 0 22px;font-size:14.5px;line-height:1.45}
+.warn .ic{position:absolute;left:15px;top:14px}
+.warn h3{font-size:15px;font-weight:700;margin:4px 0 10px}
+.warn ul{margin:0;padding-left:20px}
+.warn p{margin:0}
+.btn-signa{width:186px;height:42px;background:#c00000;color:#fff;border:0;border-radius:2px;font-size:15px;font-weight:700}
+.btn-signa:hover{background:#a40000}
+.nav5{display:flex;justify-content:space-between;align-items:center}
+
+/* ===== Modals formulari ===== */
+.dlg{background:#fff;width:440px;max-width:100%;padding:16px 16px 18px;position:relative;border-radius:3px;box-shadow:0 4px 20px rgba(0,0,0,.25)}
+.dlg h2{font-size:17px;font-weight:300;color:#333;margin:14px 0 26px}
+.dlg .bt{font-size:13.5px;font-weight:700;line-height:1.6;color:#333;margin:0 0 8px}
+.dlg .inp{height:36px;font-size:13.5px}
+.dlg .hint{font-size:12px;color:#999;line-height:1.5;margin:6px 0 0}
+.dlg-btns{display:flex;justify-content:space-between;margin-top:40px}
+.btn-cancel{background:#fff;color:#de3131;border:1px solid #de3131;border-radius:6px;height:34px;padding:0 12px;font-size:13px}
+.btn-save{background:#cc0000;color:#fff;border:0;border-radius:6px;height:34px;padding:0 14px;font-size:13.5px;font-weight:700}
+.dlg .fld{margin-bottom:14px}
+.dlg .lbl{font-size:14px}
+.dlg.wide{width:560px}
+.dlg.wide h2{font-weight:400}
+.ov.center{align-items:center}
+
+/* ===== Toast i càrrega ===== */
+.toast{position:fixed;left:50%;bottom:30px;transform:translateX(-50%);background:#333;color:#fff;padding:12px 20px;border-radius:3px;font-size:14px;z-index:80;box-shadow:0 3px 12px rgba(0,0,0,.3)}
+.loading{position:fixed;inset:0;background:rgba(255,255,255,.85);z-index:90;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:16px;font-size:15px;color:#555}
+.spin{width:42px;height:42px;border:4px solid #ddd;border-top-color:#c00000;border-radius:50%;animation:sp 0.8s linear infinite}
+@keyframes sp{to{transform:rotate(360deg)}}
+
+/* ===== Signatura AOC ===== */
+.aoc{background:#f5f5f5;min-height:100vh;padding:70px 15px}
+.aoc-card{width:631px;max-width:100%;margin:0 auto;background:#fff;border:1px solid #e3e3e3;border-radius:4px;min-height:370px;padding:28px 26px 26px;text-align:center;font-family:Lato,'Open Sans',Arial,sans-serif;display:flex;flex-direction:column}
+.aoc-card h2{font-size:21px;font-weight:400;color:#303030;margin:0 0 10px}
+.aoc-card p{font-size:15px;color:#666;margin:0 0 20px}
+.aoc-card p b{color:#555}
+.cert{background:#428bca;color:#fff;border-radius:4px;padding:8px 34px;font-size:15px;line-height:1.4;cursor:pointer;border:2px solid #428bca}
+.cert:hover{background:#3a80bc}
+.aoc-card .sp{flex:1}
+.btn-signar{align-self:center;background:#337ab7;border:1px solid #2e6da4;color:#fff;font-size:16px;padding:6px 17px;border-radius:2px;font-family:Lato,Arial,sans-serif}
+.btn-signar:hover{background:#286090}
+
+/* ===== Justificant ===== */
+.ok-wrap{padding-top:26px}
+.ok-card{background:#fff;box-shadow:0 1px 4px rgba(0,0,0,.18);padding:26px 18px 46px 18px;display:flex;gap:26px;margin-bottom:18px}
+.ok-card h2{font-size:22px;font-weight:400;color:#666;margin:12px 0 14px}
+.ok-grid{display:grid;grid-template-columns:291px 1fr;font-size:15.5px;line-height:1.7;color:#333}
+.ok-grid b{font-weight:700}
+.ok-dl{background:#fff;box-shadow:0 1px 4px rgba(0,0,0,.18);padding:16px 18px;display:flex;align-items:center;gap:30px}
+.ok-dl a{color:#c00000;font-weight:700;font-size:16px;text-decoration:none;cursor:pointer}
+.ok-dl a:hover{text-decoration:underline}
+
+@media (max-width:900px){
+  .row{grid-template-columns:1fr}
+  .row>*{grid-column:1 / -1!important}
+  .panel{padding:20px 16px 40px}
+  .stp{width:auto;flex:1 1 150px}
+  .lg-cols{flex-direction:column;align-items:center}
+  .lg-left,.lg-right{border:0;padding:0;width:100%;max-width:340px}
+  .lg-right{margin-top:40px}
+  .ok-grid{grid-template-columns:1fr 1fr}
+  .tbl{font-size:13px}
+  .tbl th{padding:10px}
+  .pf-card{padding:16px 18px;font-size:16px}
+}
+</style>
+</head>
+<body>
+
+<!-- SVG reutilitzables -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <symbol id="i-dots" viewBox="0 0 16 16"><circle cx="2.2" cy="2.2" r="1.9"/><circle cx="7.2" cy="2.2" r="1.9"/><rect x="10.4" y=".5" width="5.6" height="3.4" rx="1.7"/><circle cx="2.2" cy="7.2" r="1.9"/><circle cx="7.2" cy="7.2" r="1.9"/><circle cx="2.2" cy="12.2" r="1.9"/></symbol>
+    <symbol id="i-pencil" viewBox="0 0 20 20"><path d="M3.2 16.8l.9-3.8L13.4 3.7a1.5 1.5 0 0 1 2.1 0l.8.8a1.5 1.5 0 0 1 0 2.1L7 15.9zM12.2 4.9l2.9 2.9M4.1 13l2.9 2.9" fill="none" stroke="#8a8a8a" stroke-width="1.1" stroke-linejoin="round"/></symbol>
+    <symbol id="i-trash" viewBox="0 0 20 20"><path d="M4 5.5h12M8 5.5V4h4v1.5M5.5 5.5l.8 11h7.4l.8-11M8.5 8.5v5.5M11.5 8.5v5.5" fill="none" stroke="#8a8a8a" stroke-width="1.1" stroke-linejoin="round"/></symbol>
+  </defs>
+</svg>
+
+<!-- ========================================================= -->
+<!-- 1. AMB QUIN PERFIL VOLS ACCEDIR AL FORMULARI? (inici)      -->
+<!-- ========================================================= -->
+<section class="screen" data-screen="perfil" hidden>
+  <header class="gc-top"><div class="in">
+    <a class="gc-logo" data-go="perfil"><svg width="16" height="16" fill="#fff"><use href="#i-dots"/></svg>gencat</a>
+    <span class="gc-lang">CA <svg width="12" height="8" viewBox="0 0 12 8"><path d="M1 1.5l5 5 5-5" fill="none" stroke="#fff" stroke-width="1.6"/></svg></span>
+  </div></header>
+  <div class="fp"><div class="in">
+    <h1 class="fp-title">Sol·licitud de subvencions destinades a la realització de contractes formatius per a l'obtenció de pràctica professional, per a entitats privades. 2026</h1>
+    <h2 class="pf-q">Amb quin perfil vols accedir al formulari?</h2>
+    <a class="pf-card" data-go="acces" data-perfil="sol·licitant" href="#acces"><span>Soc la persona interessada (sol·licitant)</span><svg width="11" height="18" viewBox="0 0 11 18" aria-hidden="true"><path d="M2 2l7 7-7 7" fill="none" stroke="#c00000" stroke-width="3"/></svg></a>
+    <a class="pf-card" data-go="acces" data-perfil="presentador/a" href="#acces"><span>Actuo en nom de la persona interessada (presentador/a)</span><svg width="11" height="18" viewBox="0 0 11 18" aria-hidden="true"><path d="M2 2l7 7-7 7" fill="none" stroke="#c00000" stroke-width="3"/></svg></a>
+  </div></div>
+</section>
+
+<!-- ========================================================= -->
+<!-- 2. ACCÉS AL FORMULARI AMB IDENTIFICACIÓ DIGITAL            -->
+<!-- ========================================================= -->
+<section class="screen" data-screen="acces" hidden>
+  <header class="gc-top"><div class="in">
+    <a class="gc-logo" data-go="perfil"><svg width="16" height="16" fill="#fff"><use href="#i-dots"/></svg>gencat</a>
+    <span class="gc-lang">CA <svg width="12" height="8" viewBox="0 0 12 8"><path d="M1 1.5l5 5 5-5" fill="none" stroke="#fff" stroke-width="1.6"/></svg></span>
+  </div></header>
+  <div class="fp"><div class="in">
+    <h1 class="fp-title">Sol·licitud de subvencions destinades a la realització de contractes formatius per a l'obtenció de pràctica professional, per a entitats privades. 2026</h1>
+    <div class="acc-card">
+      <div class="acc-lock"><svg width="30" height="34" viewBox="0 0 30 34"><path d="M8.5 15V9.5a6.5 6.5 0 0 1 13 0V15" fill="none" stroke="#c70102" stroke-width="4"/><rect x="3" y="14" width="24" height="18" rx="3" fill="#c70102"/></svg></div>
+      <h2>Accés al formulari amb identificació digital</h2>
+      <p>Cal que t'identifiquis amb algun dels <a data-inert>mecanismes d'identificació digital vàlids</a> com l'idCAT Mòbil, Cl@ve, DNI electrònic, idCAT Certificat, FNMT, T-CAT, Camerfirma, etc.</p>
+      <button class="btn-accedeix" type="button" data-go="login">Accedeix</button>
+    </div>
+  </div></div>
+</section>
+
+<!-- ========================================================= -->
+<!-- 3. INICI DE SESSIÓ (idCAT / certificat digital)            -->
+<!-- ========================================================= -->
+<section class="screen" data-screen="login" hidden>
+  <div class="lg">
+    <h1>Inici de sessió</h1>
+    <div class="lg-cols">
+      <div class="lg-left">
+        <div class="idcat" aria-label="idCAT mòbil"><div class="idcat-r"><span class="a">id</span><span class="b">CAT</span></div><div class="idcat-g">mòbil</div></div>
+        <label for="lg-doc">Document identificatiu</label>
+        <input class="lg-inp" id="lg-doc" type="text" placeholder="NIF, NIE, passaport..." autocomplete="off">
+        <label for="lg-tel">Telèfon</label>
+        <div class="lg-tel"><select aria-label="Prefix"><option>0034</option><option>0033</option><option>00376</option><option>0044</option><option>0049</option><option>0039</option><option>00351</option></select><input id="lg-tel" type="tel" placeholder="Número de mòbil" autocomplete="off"></div>
+        <button class="btn-idcat" type="button" id="btn-idcat">Tinc idCAT Mòbil, continua</button>
+        <div class="lg-alta">Sense idCAT Mòbil? <a data-inert>Alta per Internet</a></div>
+      </div>
+      <div class="lg-right">
+        <h2>Altres sistemes</h2>
+        <button class="btn-sys" type="button" data-login><b>Certificat digital:</b> idCAT, DNIe ...</button>
+        <button class="btn-sys" type="button" data-login><b>Cl@ve</b> PIN24, Ciutadans UE ...</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========================================================= -->
+<!-- 4. FORMULARI (5 PASSOS)                                    -->
+<!-- ========================================================= -->
+<section class="screen" data-screen="form" id="s-form" hidden>
+  <header class="gc-top"><div class="in">
+    <a class="gc-logo"><svg width="16" height="16" fill="#fff"><use href="#i-dots"/></svg>gencat</a>
+    <span class="gc-lang">CA <svg width="12" height="8" viewBox="0 0 12 8"><path d="M1 1.5l5 5 5-5" fill="none" stroke="#fff" stroke-width="1.6"/></svg></span>
+  </div></header>
+  <div class="fp"><div class="in">
+    <h1 class="fp-title">Sol·licitud de subvencions destinades a la realització de contractes formatius per a l'obtenció de pràctica professional, per a entitats privades. 2026</h1>
+    <div class="panel"><div class="frm">
+
+      <div class="draft-note" id="draft-note" hidden><span>S'ha recuperat l'esborrany desat el <b id="draft-date"></b>.</span><button type="button" id="draft-discard">Descarta l'esborrany i comença de nou</button></div>
+
+      <nav class="stepper" aria-label="Passos del formulari">
+        <button type="button" class="stp" data-stp="1"><span class="n">1</span>Identificació</button>
+        <button type="button" class="stp" data-stp="2"><span class="n">2</span>Sol·licitud</button>
+        <button type="button" class="stp" data-stp="3"><span class="n">3</span>Altres dades</button>
+        <button type="button" class="stp" data-stp="4"><span class="n">4</span>Documentació</button>
+        <button type="button" class="stp" data-stp="5"><span class="n">5</span>Declaracions</button>
+      </nav>
+
+      <div class="alert-err" id="alert-err" hidden>Hi ha camps obligatoris sense omplir o amb errors. Revisa els camps marcats abans de continuar.</div>
+
+      <!-- ================= PAS 1 ================= -->
+      <div class="step" data-step="1">
+        <h1>Identificació</h1>
+
+        <h2 class="h-sec">Dades de la tramitació</h2>
+        <div class="fld" style="margin-left:16px;margin-bottom:8px">
+          <span class="lbl sm">Convocatòria</span>
+          <div class="ro b">Contractes formatius per a l'obtenció de pràctica professional 2026</div>
+        </div>
+
+        <!-- Només perfil presentador/a: dades de qui presenta (sol·licitant) -->
+        <div id="id-sol" hidden>
+        <h3 class="h-blk" style="margin:30px 0 14px;font-size:14px;font-weight:400;color:#666">Dades del sol·licitant</h3>
+        <h2 class="h-sec">Dades d'identificació de la persona, institució o entitat sol·licitant</h2>
+        <div class="fld" data-req data-kind="radio">
+  <span class="lbl" style="font-size:15px;display:flex;align-items:center">Selecciona si ets una persona física o jurídica o organisme: <span class="req" style="margin-left:4px;margin-right:auto">*</span><span class="help-q" title="Persona física: particular o persona autònoma. Persona jurídica: empresa, entitat o organisme amb NIF propi.">?</span></span>
+  <div class="rad"><label><input type="radio" name="sol_tipus" value="fisica" checked> Persona física</label><label><input type="radio" name="sol_tipus" value="juridica"> Persona jurídica</label></div>
+</div>
+<div class="pers-fis" data-tipus-of="sol_tipus">
+<h4 class="h-blk tight">Dades d'identificació</h4>
+<div class="row"><div class="fld c6" data-req><label class="lbl" for="sf-nom">Nom <span class="req">*</span></label><input class="inp" id="sf-nom" name="sol_nom" type="text"></div></div>
+<div class="row"><div class="fld c6" data-req><label class="lbl" for="sf-c1">Primer cognom <span class="req">*</span></label><input class="inp" id="sf-c1" name="sol_cognom1" type="text"></div></div>
+<div class="row"><div class="fld c6"><label class="lbl" for="sf-c2">Segon cognom</label><input class="inp" id="sf-c2" name="sol_cognom2" type="text"></div></div>
+<div class="row">
+<div class="fld c4" data-req><label class="lbl" for="sf-tdoc">Tipus de document d'identificació <span class="req">*</span></label><select class="inp" id="sf-tdoc" name="sol_tipus_doc"><option value=""></option><option>NIF</option><option>NIE</option><option>Passaport</option></select></div>
+<div class="fld c4" data-req data-type="doc" data-doc-from="sf-tdoc"><label class="lbl" for="sf-ndoc">Número d'identificació <span class="req">*</span></label><input class="inp" id="sf-ndoc" name="sol_num_doc" type="text" autocomplete="off"></div>
+</div>
+<div class="row">
+<div class="fld c6" data-req data-type="email"><label class="lbl" for="sf-email">Adreça electrònica <span class="req">*</span></label><input class="inp" id="sf-email" name="sol_email" type="email"></div>
+<div class="fld c2" data-type="tel"><label class="lbl" for="sf-mob">Telèfon mòbil</label><input class="inp" id="sf-mob" name="sol_mobil" type="tel" inputmode="numeric" maxlength="9"></div>
+<div class="fld c2" data-type="tel"><label class="lbl" for="sf-fix">Telèfon fix</label><input class="inp" id="sf-fix" name="sol_fix" type="tel" inputmode="numeric" maxlength="9"></div>
+</div>
+</div>
+<div class="pers-jur" data-tipus-of="sol_tipus" hidden>
+<h4 class="h-blk tight">Dades d'identificació</h4>
+<div class="row"><div class="fld c6" data-req><label class="lbl" for="sj-rao">Raó social <span class="req">*</span></label><input class="inp" id="sj-rao" name="sol_rao_social" type="text"></div></div>
+<div class="row">
+<div class="fld c4" data-req><label class="lbl" for="sj-tdoc">Tipus de document d'identificació <span class="req">*</span></label><select class="inp" id="sj-tdoc" name="sol_ent_tipus_doc"><option value=""></option><option value="NIF entitat">NIF</option></select></div>
+<div class="fld c4" data-req data-type="doc" data-doc-from="sj-tdoc"><label class="lbl" for="sj-ndoc">Número d'identificació <span class="req">*</span></label><input class="inp" id="sj-ndoc" name="sol_ent_num_doc" type="text" autocomplete="off"></div>
+</div>
+<h4 class="h-blk">Dades de la persona representant</h4>
+<div class="row"><div class="fld c6" data-req><label class="lbl" for="sr-nom">Nom <span class="req">*</span></label><input class="inp" id="sr-nom" name="solrep_nom" type="text"></div></div>
+<div class="row"><div class="fld c6" data-req><label class="lbl" for="sr-c1">Primer cognom <span class="req">*</span></label><input class="inp" id="sr-c1" name="solrep_cognom1" type="text"></div></div>
+<div class="row"><div class="fld c6"><label class="lbl" for="sr-c2">Segon cognom</label><input class="inp" id="sr-c2" name="solrep_cognom2" type="text"></div></div>
+<div class="row">
+<div class="fld c4" data-req><label class="lbl" for="sr-tdoc">Tipus de document d'identificació <span class="req">*</span></label><select class="inp" id="sr-tdoc" name="solrep_tipus_doc"><option value=""></option><option>NIF</option><option>NIE</option><option>Passaport</option></select></div>
+<div class="fld c4" data-req data-type="doc" data-doc-from="sr-tdoc"><label class="lbl" for="sr-ndoc">Número d'identificació <span class="req">*</span></label><input class="inp" id="sr-ndoc" name="solrep_num_doc" type="text" autocomplete="off"></div>
+</div>
+<div class="row">
+<div class="fld c6" data-req data-type="email"><label class="lbl" for="sr-email">Adreça electrònica <span class="req">*</span></label><input class="inp" id="sr-email" name="solrep_email" type="email"></div>
+<div class="fld c2" data-type="tel"><label class="lbl" for="sr-mob">Telèfon mòbil</label><input class="inp" id="sr-mob" name="solrep_mobil" type="tel" inputmode="numeric" maxlength="9"></div>
+<div class="fld c2" data-type="tel"><label class="lbl" for="sr-fix">Telèfon fix</label><input class="inp" id="sr-fix" name="solrep_fix" type="tel" inputmode="numeric" maxlength="9"></div>
+</div>
+</div>
+        <div class="adr" data-adr="s">
+<h4 class="h-blk">Adreça</h4>
+<div class="fld"><label class="chk-line"><input type="checkbox" class="adr-chk" name="soladr_estranger" id="s-adrext"> Adreça fora de l'Estat espanyol</label></div>
+<div class="adr-es">
+  <div class="row">
+    <div class="fld c2" data-req><label class="lbl" for="s-tvia">Tipus de via <span class="req">*</span></label><select class="inp geo-via" id="s-tvia" name="soladr_tipus_via"></select></div>
+    <div class="fld c8" data-req><label class="lbl" for="s-nvia">Nom de la via <span class="req">*</span></label><input class="inp" id="s-nvia" name="soladr_nom_via" type="text"></div>
+  </div>
+  <div class="row">
+    <div class="fld c2" data-req><label class="lbl" for="s-num">Número <span class="req">*</span></label><input class="inp" id="s-num" name="soladr_numero" type="text"></div>
+    <div class="fld c2"><label class="lbl" for="s-bloc">Bloc</label><input class="inp" id="s-bloc" name="soladr_bloc" type="text"></div>
+    <div class="fld c2"><label class="lbl" for="s-esc">Escala</label><input class="inp" id="s-esc" name="soladr_escala" type="text"></div>
+    <div class="fld c2"><label class="lbl" for="s-pis">Pis</label><input class="inp" id="s-pis" name="soladr_pis" type="text"></div>
+    <div class="fld c2"><label class="lbl" for="s-porta">Porta</label><input class="inp" id="s-porta" name="soladr_porta" type="text"></div>
+  </div>
+  <div class="row">
+    <div class="fld c2" data-req data-type="cp"><label class="lbl" for="s-cp">Codi postal <span class="req">*</span></label><input class="inp" id="s-cp" name="soladr_cp" type="text" inputmode="numeric" maxlength="5"></div>
+  </div>
+  <div class="row">
+    <div class="fld c4" data-req><label class="lbl" for="s-prov">Província <span class="req">*</span></label><select class="inp geo-prov" id="s-prov" name="soladr_provincia"></select></div>
+    <div class="fld c4" data-req><label class="lbl" for="s-mun">Municipi <span class="req">*</span></label><select class="inp geo-mun" id="s-mun" name="soladr_municipi"><option value=""></option></select></div>
+  </div>
+</div>
+<div class="adr-ext" hidden>
+  <div class="row">
+    <div class="fld c4" data-req><label class="lbl" for="s-pais">País <span class="req">*</span></label><select class="inp geo-pais" id="s-pais" name="solext_pais"></select></div>
+    <div class="fld c8" data-req><label class="lbl" for="s-extadr">Adreça <span class="req">*</span></label><input class="inp" id="s-extadr" name="solext_adreca" type="text"></div>
+  </div>
+  <div class="row">
+    <div class="fld c2"><label class="lbl" for="s-extcp">Codi postal</label><input class="inp" id="s-extcp" name="solext_cp" type="text"></div>
+    <div class="fld c4" data-req><label class="lbl" for="s-extloc">Localitat <span class="req">*</span></label><input class="inp" id="s-extloc" name="solext_localitat" type="text"></div>
+  </div>
+</div>
+</div>
+        <h4 class="h-blk">Representació</h4>
+        <div class="fld" data-req data-kind="check">
+          <label class="chk-item" style="margin:0 0 10px"><input type="checkbox" name="representacio_represent"> Represento la persona sol·licitant d'aquest formulari. Aquesta representació està inscrita al Registre electrònic de representacions i d'apoderaments de Catalunya (Represent@). <span class="req">*</span></label>
+          <p style="font-size:13px;margin:0 0 6px;color:#333">* Si ja has inscrit la representació, no cal que aportis la documentació que l'acredita.</p>
+          <p style="font-size:13px;margin:0;color:#333">Consulta com fer un tràmit en representació d'una altra persona o d'una empresa al <a class="lnk-dot" data-inert href="#">web de suport a la tramitació</a>.</p>
+        </div>
+        </div>
+
+        <!-- Persona beneficiària (els dos perfils) -->
+        <div id="id-ben">
+        <h2 class="h-sec mt" style="margin-top:44px">Dades d'identificació de la persona, institució o entitat beneficiària</h2>
+        <h3 class="h-blk">Persona beneficiària</h3>
+        <div class="fld" data-req data-kind="radio">
+  <span class="lbl" style="font-size:15px;display:flex;align-items:center">Selecciona si ets una persona física o jurídica o organisme: <span class="req" style="margin-left:4px;margin-right:auto">*</span><span class="help-q" title="Persona física: particular o persona autònoma. Persona jurídica: empresa, entitat o organisme amb NIF propi.">?</span></span>
+  <div class="rad"><label><input type="radio" name="ben_tipus" value="fisica" checked> Persona física</label><label><input type="radio" name="ben_tipus" value="juridica"> Persona jurídica</label></div>
+</div>
+<div class="pers-fis" data-tipus-of="ben_tipus">
+<h4 class="h-blk tight">Dades d'identificació</h4>
+<div class="row"><div class="fld c6" data-req><label class="lbl" for="bf-nom">Nom <span class="req">*</span></label><input class="inp" id="bf-nom" name="ben_nom" type="text"></div></div>
+<div class="row"><div class="fld c6" data-req><label class="lbl" for="bf-c1">Primer cognom <span class="req">*</span></label><input class="inp" id="bf-c1" name="ben_cognom1" type="text"></div></div>
+<div class="row"><div class="fld c6"><label class="lbl" for="bf-c2">Segon cognom</label><input class="inp" id="bf-c2" name="ben_cognom2" type="text"></div></div>
+<div class="row">
+<div class="fld c4" data-req><label class="lbl" for="bf-tdoc">Tipus de document d'identificació <span class="req">*</span></label><select class="inp" id="bf-tdoc" name="ben_tipus_doc"><option value=""></option><option>NIF</option><option>NIE</option><option>Passaport</option></select></div>
+<div class="fld c4" data-req data-type="doc" data-doc-from="bf-tdoc"><label class="lbl" for="bf-ndoc">Número d'identificació <span class="req">*</span></label><input class="inp" id="bf-ndoc" name="ben_num_doc" type="text" autocomplete="off"></div>
+</div>
+<div class="row">
+<div class="fld c6" data-req data-type="email"><label class="lbl" for="bf-email">Adreça electrònica <span class="req">*</span></label><input class="inp" id="bf-email" name="ben_email" type="email"></div>
+<div class="fld c2" data-type="tel"><label class="lbl" for="bf-mob">Telèfon mòbil</label><input class="inp" id="bf-mob" name="ben_mobil" type="tel" inputmode="numeric" maxlength="9"></div>
+<div class="fld c2" data-type="tel"><label class="lbl" for="bf-fix">Telèfon fix</label><input class="inp" id="bf-fix" name="ben_fix" type="tel" inputmode="numeric" maxlength="9"></div>
+</div>
+</div>
+<div class="pers-jur" data-tipus-of="ben_tipus" hidden>
+<h4 class="h-blk tight">Dades d'identificació</h4>
+<div class="row"><div class="fld c6" data-req><label class="lbl" for="bj-rao">Raó social <span class="req">*</span></label><input class="inp" id="bj-rao" name="ben_rao_social" type="text"></div></div>
+<div class="row">
+<div class="fld c4" data-req><label class="lbl" for="bj-tdoc">Tipus de document d'identificació <span class="req">*</span></label><select class="inp" id="bj-tdoc" name="ben_ent_tipus_doc"><option value=""></option><option value="NIF entitat">NIF</option></select></div>
+<div class="fld c4" data-req data-type="doc" data-doc-from="bj-tdoc"><label class="lbl" for="bj-ndoc">Número d'identificació <span class="req">*</span></label><input class="inp" id="bj-ndoc" name="ben_ent_num_doc" type="text" autocomplete="off"></div>
+</div>
+<h4 class="h-blk">Dades de la persona representant</h4>
+<div class="row"><div class="fld c6" data-req><label class="lbl" for="br-nom">Nom <span class="req">*</span></label><input class="inp" id="br-nom" name="benrep_nom" type="text"></div></div>
+<div class="row"><div class="fld c6" data-req><label class="lbl" for="br-c1">Primer cognom <span class="req">*</span></label><input class="inp" id="br-c1" name="benrep_cognom1" type="text"></div></div>
+<div class="row"><div class="fld c6"><label class="lbl" for="br-c2">Segon cognom</label><input class="inp" id="br-c2" name="benrep_cognom2" type="text"></div></div>
+<div class="row">
+<div class="fld c4" data-req><label class="lbl" for="br-tdoc">Tipus de document d'identificació <span class="req">*</span></label><select class="inp" id="br-tdoc" name="benrep_tipus_doc"><option value=""></option><option>NIF</option><option>NIE</option><option>Passaport</option></select></div>
+<div class="fld c4" data-req data-type="doc" data-doc-from="br-tdoc"><label class="lbl" for="br-ndoc">Número d'identificació <span class="req">*</span></label><input class="inp" id="br-ndoc" name="benrep_num_doc" type="text" autocomplete="off"></div>
+</div>
+<div class="row">
+<div class="fld c6" data-req data-type="email"><label class="lbl" for="br-email">Adreça electrònica <span class="req">*</span></label><input class="inp" id="br-email" name="benrep_email" type="email"></div>
+<div class="fld c2" data-type="tel"><label class="lbl" for="br-mob">Telèfon mòbil</label><input class="inp" id="br-mob" name="benrep_mobil" type="tel" inputmode="numeric" maxlength="9"></div>
+<div class="fld c2" data-type="tel"><label class="lbl" for="br-fix">Telèfon fix</label><input class="inp" id="br-fix" name="benrep_fix" type="tel" inputmode="numeric" maxlength="9"></div>
+</div>
+</div>
+        <div class="adr" data-adr="f">
+<h4 class="h-blk">Adreça</h4>
+<div class="fld"><label class="chk-line"><input type="checkbox" class="adr-chk" name="adr_estranger" id="f-adrext"> Adreça fora de l'Estat espanyol</label></div>
+<div class="adr-es">
+  <div class="row">
+    <div class="fld c2" data-req><label class="lbl" for="f-tvia">Tipus de via <span class="req">*</span></label><select class="inp geo-via" id="f-tvia" name="adr_tipus_via"></select></div>
+    <div class="fld c8" data-req><label class="lbl" for="f-nvia">Nom de la via <span class="req">*</span></label><input class="inp" id="f-nvia" name="adr_nom_via" type="text"></div>
+  </div>
+  <div class="row">
+    <div class="fld c2" data-req><label class="lbl" for="f-num">Número <span class="req">*</span></label><input class="inp" id="f-num" name="adr_numero" type="text"></div>
+    <div class="fld c2"><label class="lbl" for="f-bloc">Bloc</label><input class="inp" id="f-bloc" name="adr_bloc" type="text"></div>
+    <div class="fld c2"><label class="lbl" for="f-esc">Escala</label><input class="inp" id="f-esc" name="adr_escala" type="text"></div>
+    <div class="fld c2"><label class="lbl" for="f-pis">Pis</label><input class="inp" id="f-pis" name="adr_pis" type="text"></div>
+    <div class="fld c2"><label class="lbl" for="f-porta">Porta</label><input class="inp" id="f-porta" name="adr_porta" type="text"></div>
+  </div>
+  <div class="row">
+    <div class="fld c2" data-req data-type="cp"><label class="lbl" for="f-cp">Codi postal <span class="req">*</span></label><input class="inp" id="f-cp" name="adr_cp" type="text" inputmode="numeric" maxlength="5"></div>
+  </div>
+  <div class="row">
+    <div class="fld c4" data-req><label class="lbl" for="f-prov">Província <span class="req">*</span></label><select class="inp geo-prov" id="f-prov" name="adr_provincia"></select></div>
+    <div class="fld c4" data-req><label class="lbl" for="f-mun">Municipi <span class="req">*</span></label><select class="inp geo-mun" id="f-mun" name="adr_municipi"><option value=""></option></select></div>
+  </div>
+</div>
+<div class="adr-ext" hidden>
+  <div class="row">
+    <div class="fld c4" data-req><label class="lbl" for="f-pais">País <span class="req">*</span></label><select class="inp geo-pais" id="f-pais" name="ext_pais"></select></div>
+    <div class="fld c8" data-req><label class="lbl" for="f-extadr">Adreça <span class="req">*</span></label><input class="inp" id="f-extadr" name="ext_adreca" type="text"></div>
+  </div>
+  <div class="row">
+    <div class="fld c2"><label class="lbl" for="f-extcp">Codi postal</label><input class="inp" id="f-extcp" name="ext_cp" type="text"></div>
+    <div class="fld c4" data-req><label class="lbl" for="f-extloc">Localitat <span class="req">*</span></label><input class="inp" id="f-extloc" name="ext_localitat" type="text"></div>
+  </div>
+</div>
+</div>
+        </div>
+
+        <h2 class="h-sec" style="margin-top:44px">Dades d'identificació de la persona a contactar</h2>
+        <div class="fld" data-req data-kind="radio" style="margin-top:22px">
+          <span class="lbl" style="font-size:15px">Voleu informar una persona de contacte diferent de la persona sol·licitant o representant? <span class="req">*</span></span>
+          <div class="rad"><label><input type="radio" name="contacte" value="SI"> SI</label><label><input type="radio" name="contacte" value="NO"> NO</label></div>
+        </div>
+        <div id="contacte-block" hidden>
+          <h3 class="h-blk" style="margin-top:56px">Contacte</h3>
+          <h4 class="h-blk tight" style="margin-top:0">Dades d'identificació</h4>
+          <div class="row"><div class="fld c6" data-req><label class="lbl" for="f-cnom">Nom <span class="req">*</span></label><input class="inp" id="f-cnom" name="con_nom" type="text"></div></div>
+          <div class="row"><div class="fld c6" data-req><label class="lbl" for="f-cc1">Primer cognom <span class="req">*</span></label><input class="inp" id="f-cc1" name="con_cognom1" type="text"></div></div>
+          <div class="row"><div class="fld c6"><label class="lbl" for="f-cc2">Segon cognom</label><input class="inp" id="f-cc2" name="con_cognom2" type="text"></div></div>
+          <div class="row">
+            <div class="fld c4" data-req><label class="lbl" for="f-ctdoc">Tipus de document d'identificació <span class="req">*</span></label><select class="inp" id="f-ctdoc" name="con_tipus_doc"><option value=""></option><option>NIF</option><option>NIE</option><option>Passaport</option></select></div>
+            <div class="fld c4" data-req data-type="doc" data-doc-from="f-ctdoc"><label class="lbl" for="f-cndoc">Número d'identificació <span class="req">*</span></label><input class="inp" id="f-cndoc" name="con_num_doc" type="text"></div>
+          </div>
+          <div class="row">
+            <div class="fld c6" data-req data-type="email"><label class="lbl" for="f-cemail">Adreça electrònica <span class="req">*</span></label><input class="inp" id="f-cemail" name="con_email" type="email"></div>
+            <div class="fld c2" data-type="tel"><label class="lbl" for="f-cmob">Telèfon mòbil</label><input class="inp" id="f-cmob" name="con_mobil" type="tel" inputmode="numeric" maxlength="9"></div>
+            <div class="fld c2" data-type="tel"><label class="lbl" for="f-cfix">Telèfon fix</label><input class="inp" id="f-cfix" name="con_fix" type="tel" inputmode="numeric" maxlength="9"></div>
+          </div>
+        </div>
+
+        <div class="nav">
+          <span></span>
+          <button class="btn-red" type="button" data-next>Següent <svg width="14" height="14" viewBox="0 0 14 14"><path d="M3 1.5l8 5.5-8 5.5" fill="none" stroke="#fff" stroke-width="2.6" stroke-linejoin="miter"/></svg></button>
+        </div>
+      </div>
+
+      <!-- ================= PAS 2 ================= -->
+      <div class="step" data-step="2" hidden>
+        <h1>Dades de la sol·licitud</h1>
+        <h4 class="h-blk" style="margin:60px 0 40px;font-size:15px">Dades addicionals de l'entitat sol·licitant</h4>
+
+        <div class="fld" data-req>
+          <label class="lbl" for="f-treb" style="font-size:15px">Nombre de persones treballadores de l'entitat <span class="req">*</span><span class="help-q" title="Indiqueu el nombre de persones treballadores de l'entitat">?</span></label>
+          <select class="inp" id="f-treb" name="num_treballadors"><option value=""></option><option>Fins a 10 treballadors</option><option>D'11 a 30 treballadors</option><option>De 31 a 49 treballadors</option><option>De 50 treballadors en endavant</option></select>
+        </div>
+        <div class="fld">
+          <label class="lbl" for="f-enslocal" style="font-size:15px">En cas de ser una entitat dependent o vinculada a un ens local, indicar l'ens públic corresponent</label>
+          <input class="inp" id="f-enslocal" name="ens_local" type="text">
+        </div>
+        <div class="fld">
+          <label class="lbl" for="f-orgaut" style="font-size:15px">En cas de ser un organisme autònom adscrit a un ens local, indicar l'ens públic corresponent</label>
+          <input class="inp" id="f-orgaut" name="organisme_autonom" type="text">
+        </div>
+        <div class="fld">
+          <span class="lbl" id="ms-lbl" style="font-size:15px">En cas de ser una ESAL, cooperativa o empresa privada, indicar en quina o quines de les línies presenteu la sol·licitud</span>
+          <input type="hidden" name="linies" id="f-linies">
+          <div class="ms" id="ms-linies">
+            <div class="ms-box" tabindex="0" role="listbox" aria-multiselectable="true" aria-labelledby="ms-lbl"></div>
+            <div class="ms-list" hidden>
+              <div class="ms-opt" data-v="Dones en sectors masculinitzats">Dones en sectors masculinitzats</div>
+              <div class="ms-opt" data-v="G03-11 i/o sectors industrial, digital i agrari">G03-11 i/o sectors industrial, digital i agrari</div>
+              <div class="ms-opt" data-v="Altres no descrits anteriorment">Altres no descrits anteriorment</div>
+            </div>
+          </div>
+        </div>
+
+        <h4 class="h-blk" style="margin:56px 0 34px">Consentiment per consultar dades</h4>
+        <div class="fld" data-req>
+          <label class="cons-txt" for="f-cons1" style="display:block">Es requereix el vostre consentiment explícit per la consulta de les dades tributàries davant l'Estat i la Generalitat de Catalunya i les obligacions davant la Seguretat Social per comprovar que es compleixen les condicions requerides. Si no doneu el vostre consentiment, haureu d'adjuntar la documentació acreditativa corresponent. <span class="req">*</span></label>
+          <select class="inp" id="f-cons1" name="consentiment_tributari"><option value=""></option><option>Sí</option><option>No</option></select>
+        </div>
+        <div class="fld" data-req style="margin-top:34px">
+          <label class="cons-txt" for="f-cons2" style="display:block">Es consultaran les dades necessàries per comprovar que compleixo les condicions requerides i no cal que presenti els documents:<br>Dades d'altres ajuts i/o subvencions concedides<br>En cas de d'autònoms, empreses, societats i entitats jurídiques Certificat de l'impost sobre activitats econòmiques<br><span class="req">*</span></label>
+          <select class="inp" id="f-cons2" name="consentiment_interoperabilitat"><option value=""></option><option>No m'oposo a la consulta</option><option>M'oposo a la consulta</option></select>
+        </div>
+
+        <div id="accions"></div>
+        <div class="right" style="margin-top:6px"><button class="btn-red btn-afegir" type="button" id="btn-afegir">Afegir</button></div>
+
+        <div class="nav">
+          <button class="btn-red prev" type="button" data-prev><svg width="14" height="14" viewBox="0 0 14 14"><path d="M11 1.5 3 7l8 5.5" fill="none" stroke="#fff" stroke-width="2.6"/></svg> Anterior</button>
+          <button class="btn-red" type="button" data-next>Següent <svg width="14" height="14" viewBox="0 0 14 14"><path d="M3 1.5l8 5.5-8 5.5" fill="none" stroke="#fff" stroke-width="2.6"/></svg></button>
+        </div>
+      </div>
+
+      <!-- ================= PAS 3 ================= -->
+      <div class="step" data-step="3" hidden>
+        <h1>Altres dades</h1>
+        <div class="decl-h"><span>Declaració d'altres subvencions o ajuts per a la mateixa activitat procedent d'altres departaments, administracions i entitats públiques o privades</span></div>
+        <div class="fld" data-req data-kind="radio" style="margin-top:22px">
+          <span class="lbl">Ha rebut o demanat altres ajuts per la mateixa finalitat <span class="req">*</span></span>
+          <div class="rad" style="gap:40px"><label><input type="radio" name="altres_ajuts" value="No"> No</label><label><input type="radio" name="altres_ajuts" value="Si"> Si</label></div>
+        </div>
+        <div id="ajuts-block" hidden>
+          <div class="fld" data-kind="ajuts" data-req style="margin-bottom:10px">
+            <table class="tbl">
+              <thead><tr><th>Institució, entitat o empresa *</th><th>Pública / Privada *</th><th>Objecte de l'ajut o subvenció *</th><th class="r">Import sol·licitat *</th></tr></thead>
+              <tbody id="ajuts-body"></tbody>
+              <tfoot><tr><td class="c1"><button class="ic-btn" type="button" id="ajut-add" title="Afegeix un ajut"><svg width="20" height="20"><use href="#i-pencil"/></svg></button></td><td></td><td class="r">Total:</td><td class="r" id="ajuts-total">0,00 €</td></tr></tfoot>
+            </table>
+          </div>
+        </div>
+
+        <h4 class="h-blk" style="margin:66px 0 40px">Dades bancàries</h4>
+        <div class="fld" data-req data-kind="iban" data-type="iban" style="margin-bottom:0">
+          <span class="lbl">IBAN<span class="req">*</span></span>
+          <p class="iban-note">Podeu omplir l’IBAN posant-lo tot a la primera casella i prement la tecla Tabulador.</p>
+          <div class="row" id="iban-row">
+            <div class="c2"><input class="inp iban-box" name="iban_1" type="text" aria-label="IBAN, casella 1" autocomplete="off"></div>
+            <div class="c2"><input class="inp iban-box" name="iban_2" type="text" maxlength="4" aria-label="IBAN, casella 2" autocomplete="off"></div>
+            <div class="c2"><input class="inp iban-box" name="iban_3" type="text" maxlength="4" aria-label="IBAN, casella 3" autocomplete="off"></div>
+            <div class="c2"><input class="inp iban-box" name="iban_4" type="text" maxlength="4" aria-label="IBAN, casella 4" autocomplete="off"></div>
+            <div class="c2"><input class="inp iban-box" name="iban_5" type="text" maxlength="4" aria-label="IBAN, casella 5" autocomplete="off"></div>
+            <div class="c2"><input class="inp iban-box" name="iban_6" type="text" maxlength="4" aria-label="IBAN, casella 6" autocomplete="off"></div>
+          </div>
+        </div>
+        <div class="row" style="margin-top:24px">
+          <div class="c4"><div class="ex-box">Exemple: ESXX 9999 9999 9999 9999<span class="q" title="Exemple de format d'IBAN">?</span></div></div>
+        </div>
+        <div class="row">
+          <div class="fld c4"><label class="lbl" for="f-ibanx">IBAN EXTRA</label><input class="inp" id="f-ibanx" name="iban_extra" type="text"></div>
+          <div class="fld c6 off6" style="grid-column:7 / span 6"><label class="lbl" for="f-swift">SWIFT/BIC (només en el cas d'entitats bancàries estrangeres)</label><input class="inp" id="f-swift" name="swift" type="text" style="text-transform:uppercase"></div>
+        </div>
+
+        <div class="nav">
+          <button class="btn-red prev" type="button" data-prev><svg width="14" height="14" viewBox="0 0 14 14"><path d="M11 1.5 3 7l8 5.5" fill="none" stroke="#fff" stroke-width="2.6"/></svg> Anterior</button>
+          <button class="btn-red" type="button" data-next>Següent <svg width="14" height="14" viewBox="0 0 14 14"><path d="M3 1.5l8 5.5-8 5.5" fill="none" stroke="#fff" stroke-width="2.6"/></svg></button>
+        </div>
+      </div>
+
+      <!-- ================= PAS 4 ================= -->
+      <div class="step" data-step="4" hidden>
+        <h1>Documentació</h1>
+        <p class="doc-intro">Adjunta la documentació següent en els formats que t'indiquem:</p>
+        <div id="docs"></div>
+        <div class="nav">
+          <button class="btn-red prev" type="button" data-prev><svg width="14" height="14" viewBox="0 0 14 14"><path d="M11 1.5 3 7l8 5.5" fill="none" stroke="#fff" stroke-width="2.6"/></svg> Anterior</button>
+          <button class="btn-red" type="button" data-next>Següent <svg width="14" height="14" viewBox="0 0 14 14"><path d="M3 1.5l8 5.5-8 5.5" fill="none" stroke="#fff" stroke-width="2.6"/></svg></button>
+        </div>
+      </div>
+
+      <!-- ================= PAS 5 ================= -->
+      <div class="step" data-step="5" hidden>
+        <h3 class="h-decl">Declaracions</h3>
+
+        <div class="fld" style="margin-bottom:46px">
+          <label class="p-decl" for="f-registre">En cas d'entitats sense ànim de lucre, que l'entitat que represento està legalment constituïda i inscrita en el registre corresponent.</label>
+          <input class="inp" id="f-registre" name="registre_esal" type="text">
+        </div>
+
+        <div class="chk-group">
+          <label class="chk-item"><input type="checkbox" name="as_1">S'ha fet una declaració de principis que garanteix el compromís de la direcció de l'empresa de tolerància zero en relació amb qualsevol conducta o actitud constitutiva d'assetjament sexual i/o per raó de sexe.</label>
+          <label class="chk-item"><input type="checkbox" name="as_2"> Es fan actuacions d'informació, sensibilització i conscienciació a les persones treballadores, al personal directiu i als caps intermedis per millorar el clima laboral mitjançant el canvi de comportaments i actituds inadequades.</label>
+          <label class="chk-item"><input type="checkbox" name="as_3"> Es garanteix la confidencialitat davant d'un cas d'assetjament sexual i/o per raó de sexe, així com la protecció de possibles represàlies.</label>
+          <label class="chk-item"><input type="checkbox" name="as_4"> Es realitzen cursos de formació especifica en matèria d'assetjament sexual i/o per raó de sexe destinats a tot el personal de l'empresa i, més especialment, al personal directiu i als caps intermedis.</label>
+          <label class="chk-item"><input type="checkbox" name="as_5"> Es fan campanyes informatives que incloguin sessions per explicar a les persones treballadores els seus drets i les normes jurídiques que els protegeixen, les sancions establertes i el procediment per formular queixes o denúncies.</label>
+          <label class="chk-item"><input type="checkbox" name="as_6">Anualment es valora la incidència d'aquest tipus de conductes a l'empresa i les característiques que presenten.</label>
+          <label class="chk-item"><input type="checkbox" name="as_7"> S'han establert canals de comunicació perquè tota la plantilla pugui informar de les actituds i/o dels comportaments inapropiats o generadors d'assetjament per raó de sexe en els centres de treball.</label>
+          <label class="chk-item"><input type="checkbox" name="as_8">S'ha definit i redactat un protocol que arbitri els procediments que cal seguir en cas d'assetjament sexual i/o d'assetjament per raó de sexe en els centres de treball.</label>
+          <label class="chk-item" style="margin-bottom:22px"><input type="checkbox" name="as_9">Existeix una persona, un comitè o una comissió responsable per fer el seguiment i l'avaluació dels mecanismes d'abordatge.</label>
+          <label class="lbl-ta" for="f-altresmes" style="margin-top:0">Altres mesures a què es compromet l'entitat:</label>
+          <textarea class="inp" id="f-altresmes" name="altres_mesures"></textarea>
+        </div>
+
+        <div class="chk-group" style="margin-top:46px">
+          <label class="chk-item"><input type="checkbox" name="pi_1"> En cas de ser una entitat amb una plantilla igual o superior a 50 persones treballadores l'entitat que represento ha elaborat i aplicat un Pla d'Igualtat, d'acord amb el que estableix l'article 45 de la Llei orgànica 3/2007, de 22 de març, per a la igualtat efectiva de dones i homes, i el Reial Decret 901/2020, de 13 d'octubre, pel qual es regulen els plans d'igualtat i el seu registre i es modifica el Reial Decret 713/2010, de 28 de maig, sobre registre i dipòsit de convenis i acords col·lectius de treball.</label>
+          <label class="chk-item"><input type="checkbox" name="pi_2"> En cas de ser una entitat amb una plantilla inferior a 50 persones treballadores, l'entitat que represento ha elaborat i aplicat voluntàriament un Pla d'Igualtat, d'acord amb el que estableix l'article 45 de la Llei orgànica 3/2007, de 22 de març, per a la igualtat efectiva de dones i homes, i el Reial Decret 901/2020, de 13 d'octubre, pel qual es regulen els plans d'igualtat i el seu registre i es modifica el Reial Decret 713/2010, de 28 de maig, sobre registre i dipòsit de convenis i acords col·lectius de treball.</label>
+          <label class="chk-item"><input type="checkbox" name="pi_3"> En cas d'ens local, que l'ens local que represento ha elaborat i aplicat un Pla d'Igualtat, d'acord amb el que estableix l'article 15 de la Llei 17/2015, de 21 de juliol, d'igualtat efectiva entre homes i dones.</label>
+          <label class="chk-item"><input type="checkbox" name="pi_4"> Que el Pla d'igualtat indicat als punts anteriors està registrat al Registre de plans d'Igualtat del Departament d'Empresa i Treball. En cas de no estar inscrit en aquest Registre, si es considera necessària la seva revisió l'òrgan gestor podrà sol·licitar a l'entitat la presentació d'aquest document.</label>
+        </div>
+
+        <div class="chk-group" style="margin-top:46px">
+          <p class="p-txt" style="text-align:left">En relació amb altres possibles ajuts sotmesos a la normativa de minimis (marqueu només una opció):</p>
+          <label class="chk-item"><input type="checkbox" name="minimis_no" data-excl="minimis"> Que l'entitat que represento NO HA REBUT de les administracions públiques catalanes, espanyoles i/o comunitàries en els darrers 3 exercicis fiscals (exercici fiscal en curs i els dos anteriors) cap altre ajut de qualsevol naturalesa sotmès a minimis.</label>
+          <label class="chk-item" style="margin-bottom:22px"><input type="checkbox" name="minimis_si" data-excl="minimis"> Que l'entitat que represento HA REBUT de les administracions públiques catalanes, espanyoles i/o comunitàries en els darrers 3 exercicis fiscals (exercici fiscal en curs i els dos anteriors) els següents ajuts de qualsevol naturalesa sotmesos a minimis.</label>
+          <label class="lbl-ta" for="f-minimis" style="margin-top:0">Relacionar a continuació Data, import, entitat atorgant i normativa corresponent per cada ajut rebut:</label>
+          <textarea class="inp" id="f-minimis" name="minimis_relacio"></textarea>
+        </div>
+
+        <div class="chk-group" style="margin-top:46px">
+          <label class="chk-item" style="margin-bottom:38px"><input type="checkbox" name="compt_financera">Financera (general)</label>
+          <label class="chk-item" style="margin-bottom:24px"><input type="checkbox" name="compt_pressupostaria">Pressupostària (entitat pública)</label>
+          <p class="p-txt">I es compromet a dur a terme una comptabilitat separada vinculada a l'activitat subvencionada mitjançant el sistema de comptabilització separada següent:</p>
+          <label class="chk-item"><input type="checkbox" name="sep_1" data-excl="sep"> Comptabilització separada, o per projectes, o de costos (en cas afirmatiu indicar a l'apartat d'observacions el nom de departament, projecte o unitat orgànica)</label>
+          <label class="chk-item"><input type="checkbox" name="sep_2" data-excl="sep"> Comptabilitat identificada amb codis comptables específics (en cas afirmatiu, indicar a l'apartat d'observacions els codis oberts o bé el criteri seguit per al seu establiment)</label>
+          <label class="chk-item" style="margin-bottom:22px"><input type="checkbox" name="sep_3" data-excl="sep"> Cap dels sistemes de comptabilització anteriors (en aquest cas, explicar a l'apartat d'observacions com identifica l'entitat les despeses subvencionables dins de la comptabilitat ? pista de comptabilitat)</label>
+          <label class="lbl-ta" for="f-obs" style="margin-top:0">Observacions:</label>
+          <textarea class="inp" id="f-obs" name="observacions"></textarea>
+        </div>
+
+        <h4 class="h-blk" style="margin:66px 0 44px">Protecció de dades</h4>
+        <div class="fld" data-req data-kind="check">
+          <div class="pd-row">
+            <label class="chk-line"><input type="checkbox" name="proteccio_dades"> He llegit i accepto la informació bàsica sobre protecció de dades <span class="req">*</span></label>
+            <button type="button" class="pd-tog" id="pd-tog" aria-expanded="false" aria-controls="pd-info" title="Informació bàsica sobre protecció de dades"><svg width="12" height="8" viewBox="0 0 12 8"><path d="M1.2 6.8 6 2l4.8 4.8" fill="none" stroke="#fff" stroke-width="2"/></svg></button>
+          </div>
+          <div class="pd-info" id="pd-info" hidden>
+            <div><b>Responsable del tractament</b><span>Servei Públic d'Ocupació de Catalunya (SOC).</span></div>
+            <div><b>Finalitat</b><span>Gestionar la sol·licitud, la concessió i el seguiment de les subvencions destinades a la realització de contractes formatius per a l'obtenció de la pràctica professional.</span></div>
+            <div><b>Legitimació</b><span>Compliment d'una missió realitzada en interès públic o en l'exercici de poders públics.</span></div>
+            <div><b>Destinataris</b><span>Les dades no es comunicaran a tercers, excepte en els casos previstos per la llei.</span></div>
+            <div><b>Drets</b><span>Podeu accedir a les vostres dades, rectificar-les, suprimir-les, sol·licitar-ne la portabilitat, oposar-vos al tractament i sol·licitar-ne la limitació.</span></div>
+          </div>
+        </div>
+
+        <div class="right" style="margin-top:56px"><button class="btn-desa" type="button" data-open-desa>Desa l'esborrany</button></div>
+
+        <div class="warn">
+          <svg class="ic" width="38" height="38" viewBox="0 0 38 38"><circle cx="19" cy="19" r="18" fill="#fed226"/><rect x="16.6" y="8" width="4.8" height="15" rx="2" fill="#fff"/><circle cx="19" cy="28.5" r="2.7" fill="#fff"/></svg>
+          <h3>Has d'enviar aquest formulari signat</h3>
+          <p>El pots signar amb qualsevol d'aquests mecanismes:</p>
+          <ul>
+            <li>Com a <b>persona física</b>: per exemple, amb DNI electrònic, FNMT, etc.</li>
+            <li>Com a <b>representant legal d'empreses i organitzacions</b>: per exemple amb FNMT, Camerfirma, Firmaprofesional, Ancert, etc.</li>
+            <li>Com a <b>persona vinculada</b> a una organització: per exemple, amb Camerfirma, Firmaprofesional, Ancert, T-CAT, etc.</li>
+          </ul>
+        </div>
+
+        <div class="nav5">
+          <button class="btn-red prev" type="button" data-prev><svg width="14" height="14" viewBox="0 0 14 14"><path d="M11 1.5 3 7l8 5.5" fill="none" stroke="#fff" stroke-width="2.6"/></svg> Anterior</button>
+          <button class="btn-signa" type="button" id="btn-signa">Signa i envia</button>
+        </div>
+      </div>
+
+    </div></div>
+  </div></div>
+
+  <!-- Modal: Desar l'esborrany -->
+  <div class="ov center" id="dlg-desa" hidden>
+    <div class="dlg" role="dialog" aria-modal="true" aria-labelledby="desa-t">
+      <button class="dlg-x" type="button" data-close aria-label="Tanca" style="right:10px;top:8px"><svg width="13" height="13" viewBox="0 0 13 13"><path d="M1.5 1.5l10 10M11.5 1.5l-10 10" stroke="#da0909" stroke-width="2"/></svg></button>
+      <h2 id="desa-t">Desar l'esborrany</h2>
+      <p class="bt">L'esborrany es desarà a la teva àrea privada.<br>Indica l'adreça electrònica si vols rebre també un avís a la teva bústia de correu (opcional).</p>
+      <input class="inp" id="desa-email" type="email" aria-label="Adreça electrònica per a l'avís">
+      <p class="hint">Elimina l'adreça si no vols rebre l'avís en aquesta adreça o canvia-la si prefereixes rebre'l en una altra.</p>
+      <div class="dlg-btns"><button class="btn-cancel" type="button" data-close>Cancel·la</button><button class="btn-save" type="button" id="desa-ok">Desa l'esborrany</button></div>
+    </div>
+  </div>
+
+  <!-- Modal: ajut -->
+  <div class="ov center" id="dlg-ajut" hidden>
+    <div class="dlg wide" role="dialog" aria-modal="true" aria-labelledby="ajut-t">
+      <button class="dlg-x" type="button" data-close aria-label="Tanca" style="right:10px;top:8px"><svg width="13" height="13" viewBox="0 0 13 13"><path d="M1.5 1.5l10 10M11.5 1.5l-10 10" stroke="#da0909" stroke-width="2"/></svg></button>
+      <h2 id="ajut-t">Declaració d'altres subvencions o ajuts</h2>
+      <div class="fld" data-req><label class="lbl" for="aj-inst">Institució, entitat o empresa <span class="req">*</span></label><input class="inp" id="aj-inst" type="text"></div>
+      <div class="fld" data-req><label class="lbl" for="aj-tipus">Pública / Privada <span class="req">*</span></label><select class="inp" id="aj-tipus"><option value=""></option><option>Pública</option><option>Privada</option></select></div>
+      <div class="fld" data-req><label class="lbl" for="aj-obj">Objecte de l'ajut o subvenció <span class="req">*</span></label><input class="inp" id="aj-obj" type="text"></div>
+      <div class="fld" data-req data-type="import"><label class="lbl" for="aj-imp">Import sol·licitat <span class="req">*</span></label><input class="inp imp" id="aj-imp" type="text" inputmode="decimal"></div>
+      <div class="dlg-btns"><button class="btn-cancel" type="button" data-close>Cancel·la</button><button class="btn-save" type="button" id="ajut-ok">Desa</button></div>
+    </div>
+  </div>
+</section>
+
+<!-- ========================================================= -->
+<!-- 5. SIGNATURA (AOC)                                         -->
+<!-- ========================================================= -->
+<section class="screen" data-screen="aoc" hidden>
+  <div class="aoc">
+    <div class="aoc-card">
+      <h2>Seleccioneu el certificat</h2>
+      <p>Per tal de realitzar la signatura, seleccioneu el certificat i premeu "<b>Signar</b>".</p>
+      <div class="cert" tabindex="0">00000000T Persona de la Peça (R:Q0000000J) [Organització de Prova] (EC-SectorPublic [CONSORCI ADMINISTRACIO OBERTA DE CATALUNYA]) - SN: A00FCDC4 - Caduca: 05/07/2028</div>
+      <div class="sp"></div>
+      <button class="btn-signar" type="button" id="btn-signar">Signar</button>
+    </div>
+  </div>
+</section>
+
+<!-- ========================================================= -->
+<!-- 6. JUSTIFICANT DE REBUDA                                   -->
+<!-- ========================================================= -->
+<section class="screen" data-screen="ok" hidden>
+  <header class="gc-top"><div class="in">
+    <a class="gc-logo" data-go="perfil"><svg width="16" height="16" fill="#fff"><use href="#i-dots"/></svg>gencat</a>
+    <span class="gc-lang">CA <svg width="12" height="8" viewBox="0 0 12 8"><path d="M1 1.5l5 5 5-5" fill="none" stroke="#fff" stroke-width="1.6"/></svg></span>
+  </div></header>
+  <div class="fp"><div class="in">
+    <h1 class="fp-title">Sol·licitud de subvencions destinades a la realització de contractes formatius per a l'obtenció de pràctica professional, per a entitats privades. 2026</h1>
+    <div class="ok-wrap">
+      <div class="ok-card">
+        <svg width="48" height="48" viewBox="0 0 48 48" style="flex:none"><circle cx="24" cy="24" r="24" fill="#00b400"/><path d="M13 24.5l7.5 7.5L35 17.5" fill="none" stroke="#fff" stroke-width="5.5"/></svg>
+        <div>
+          <h2>El formulari s'ha enviat correctament.</h2>
+          <div class="ok-grid">
+            <span>Id tràmit:</span><b id="ok-id"></b>
+            <span>Id servei:</span><b>191380</b>
+            <span>Registre d'entrada:</span><b id="ok-re"></b>
+            <span>Registre de sortida:</span><b id="ok-rs"></b>
+            <span>Data de registre:</span><b id="ok-data"></b>
+          </div>
+        </div>
+      </div>
+      <div class="ok-dl">
+        <svg width="42" height="50" viewBox="0 0 42 50" style="flex:none"><path d="M3 4a3 3 0 0 1 3-3h20l13 13v32a3 3 0 0 1-3 3H6a3 3 0 0 1-3-3z" fill="#fff" stroke="#b00303" stroke-width="2"/><path d="M26 1v13h13" fill="none" stroke="#b00303" stroke-width="2"/><path d="M21 21v15M14 29.5l7 7 7-7" fill="none" stroke="#d70000" stroke-width="3.6"/></svg>
+        <a id="ok-rebut">Descarregueu el rebut de registre</a>
+      </div>
+    </div>
+  </div></div>
+</section>
+
+<div class="loading" id="loading" hidden><div class="spin"></div><div id="loading-msg"></div></div>
+<div class="toast" id="toast" hidden></div>
+
+<template id="tpl-accio">
+  <div class="accio">
+    <div class="accio-h"><h3 class="h-accio">Acció <span class="accio-n"></span></h3><button type="button" class="btn-del" data-del-accio hidden>Elimina</button></div>
+    <hr class="accio-hr">
+    <div class="fld"><span class="lbl">Línia <span class="req">*</span></span><div class="ro">Contracte formatiu per a l?obtenció de la pràctica professional</div></div>
+    <div class="fld"><span class="lbl">Acció <span class="req">*</span></span><div class="ro">Actuació de contractació laboral</div></div>
+    <div class="fld" data-req><label class="lbl">Títol Activitat <span class="req">*</span></label><input class="inp" type="text" data-k="titol"></div>
+    <h4 class="h-sub">Contractes formatius per a l'obtenció de la pràctica professional 2026</h4>
+    <div class="row">
+      <div class="fld c6" data-req><label class="lbl" style="font-size:15px">Durada dels contractes en mesos <span class="req">*</span></label><select class="inp" data-k="durada"><option value=""></option><option>12</option></select></div>
+      <div class="fld c6" data-req><label class="lbl" style="font-size:15px">Modalitat del contracte <span class="req">*</span></label><select class="inp" data-k="modalitat"><option value=""></option><option>Temps complet</option></select></div>
+    </div>
+    <div class="row" style="margin-top:20px">
+      <div class="fld c6" data-req><label class="lbl" style="font-size:15px">Quantia anual del mòdul <span class="req">*</span></label><select class="inp" data-k="quantia"><option value=""></option><option>Grup de cotització de l?1 al 2: 26.689,08 Euros</option><option>Grup de cotització del 3 al 7: 19.165,39 Euros</option><option>Grup de cotització del 8 al 11: 19.002,30 Euros</option></select></div>
+    </div>
+    <div class="attrs"><span>Es mostren 3 de 3 atributs</span><button type="button" class="btn-gray" data-inert>Mostra'm més atributs</button></div>
+    <div class="row">
+      <div class="fld c4" data-req data-type="import"><label class="lbl" style="font-size:15px">Import sol·licitat <span class="req">*</span></label><input class="inp imp" type="text" inputmode="decimal" data-k="import"></div>
+    </div>
+  </div>
+</template>
+
+<script>
+(function(){
+'use strict';
+var $=function(s,r){return (r||document).querySelector(s)};
+var $$=function(s,r){return Array.prototype.slice.call((r||document).querySelectorAll(s))};
+var cmp=function(a,b){return a.localeCompare(b,'ca')};
+function esc(s){return String(s==null?'':s).replace(/[&<>"']/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]})}
+
+/* ---------------- Dades ---------------- */
+/* Municipis de Catalunya per província i comarca. Font: Idescat, codis territorials (947 municipis). */
+var GEO={
+ "Barcelona":{
+  "Alt Penedès":["Avinyonet del Penedès","Cabanyes, les","Castellet i la Gornal","Castellví de la Marca","Font-rubí","Gelida","Granada, la","Mediona","Olesa de Bonesvalls","Olèrdola","Pacs del Penedès","Pla del Penedès, el","Pontons","Puigdàlber","Sant Cugat Sesgarrigues","Sant Llorenç d'Hortons","Sant Martí Sarroca","Sant Pere de Riudebitlles","Sant Quintí de Mediona","Sant Sadurní d'Anoia","Santa Fe del Penedès","Santa Margarida i els Monjos","Subirats","Torrelavit","Torrelles de Foix","Vilafranca del Penedès","Vilobí del Penedès"],
+  "Anoia":["Argençola","Bellprat","Bruc, el","Cabrera d'Anoia","Calaf","Calonge de Segarra","Capellades","Carme","Castellfollit de Riubregós","Castellolí","Copons","Hostalets de Pierola, els","Igualada","Jorba","Llacuna, la","Masquefa","Montmaneu","Orpí","Piera","Pobla de Claramunt, la","Prats de Rei, els","Pujalt","Rubió","Sant Martí Sesgueioles","Sant Martí de Tous","Sant Pere Sallavinera","Santa Margarida de Montbui","Santa Maria de Miralles","Torre de Claramunt, la","Vallbona d'Anoia","Veciana","Vilanova del Camí","Òdena"],
+  "Bages":["Aguilar de Segarra","Artés","Avinyó","Balsareny","Callús","Cardona","Castellbell i el Vilar","Castellfollit del Boix","Castellgalí","Castellnou de Bages","Fonollosa","Gaià","Manresa","Marganell","Monistrol de Montserrat","Mura","Navarcles","Navàs","Pont de Vilomara i Rocafort, el","Rajadell","Sallent","Sant Feliu Sasserra","Sant Fruitós de Bages","Sant Joan de Vilatorrada","Sant Mateu de Bages","Sant Salvador de Guardiola","Sant Vicenç de Castellet","Santpedor","Súria","Talamanca"],
+  "Baix Llobregat":["Abrera","Begues","Castelldefels","Castellví de Rosanes","Cervelló","Collbató","Corbera de Llobregat","Cornellà de Llobregat","Esparreguera","Esplugues de Llobregat","Gavà","Martorell","Molins de Rei","Olesa de Montserrat","Pallejà","Palma de Cervelló, la","Papiol, el","Prat de Llobregat, el","Sant Andreu de la Barca","Sant Boi de Llobregat","Sant Climent de Llobregat","Sant Esteve Sesrovires","Sant Feliu de Llobregat","Sant Joan Despí","Sant Just Desvern","Sant Vicenç dels Horts","Santa Coloma de Cervelló","Torrelles de Llobregat","Vallirana","Viladecans"],
+  "Barcelonès":["Badalona","Barcelona","Hospitalet de Llobregat, l'","Sant Adrià de Besòs","Santa Coloma de Gramenet"],
+  "Berguedà":["Avià","Bagà","Berga","Borredà","Capolat","Casserres","Castell de l'Areny","Castellar de n'Hug","Castellar del Riu","Cercs","Espunyola, l'","Fígols","Gironella","Gisclareny","Guardiola de Berguedà","Montclar","Montmajor","Nou de Berguedà, la","Olvan","Pobla de Lillet, la","Puig-reig","Quar, la","Sagàs","Saldes","Sant Jaume de Frontanyà","Sant Julià de Cerdanyola","Santa Maria de Merlès","Vallcebre","Vilada","Viver i Serrateix"],
+  "Garraf":["Canyelles","Cubelles","Olivella","Sant Pere de Ribes","Sitges","Vilanova i la Geltrú"],
+  "Lluçanès":["Alpens","Lluçà","Olost","Oristà","Perafita","Prats de Lluçanès","Sant Martí d'Albars","Sobremunt"],
+  "Maresme":["Alella","Arenys de Mar","Arenys de Munt","Argentona","Cabrera de Mar","Cabrils","Caldes d'Estrac","Calella","Canet de Mar","Dosrius","Malgrat de Mar","Masnou, el","Mataró","Montgat","Palafolls","Pineda de Mar","Premià de Dalt","Premià de Mar","Sant Andreu de Llavaneres","Sant Cebrià de Vallalta","Sant Iscle de Vallalta","Sant Pol de Mar","Sant Vicenç de Montalt","Santa Susanna","Teià","Tiana","Tordera","Vilassar de Dalt","Vilassar de Mar","Òrrius"],
+  "Moianès":["Calders","Castellcir","Castellterçol","Collsuspina","Estany, l'","Granera","Moià","Monistrol de Calders","Sant Quirze Safaja","Santa Maria d'Oló"],
+  "Osona":["Aiguafreda","Balenyà","Brull, el","Calldetenes","Centelles","Esquirol, l'","Folgueroles","Gurb","Malla","Manlleu","Masies de Roda, les","Masies de Voltregà, les","Montesquiu","Muntanyola","Orís","Roda de Ter","Rupit i Pruit","Sant Agustí de Lluçanès","Sant Bartomeu del Grau","Sant Boi de Lluçanès","Sant Hipòlit de Voltregà","Sant Julià de Vilatorta","Sant Martí de Centelles","Sant Pere de Torelló","Sant Quirze de Besora","Sant Sadurní d'Osormort","Sant Vicenç de Torelló","Santa Cecília de Voltregà","Santa Eugènia de Berga","Santa Eulàlia de Riuprimer","Santa Maria de Besora","Seva","Sora","Taradell","Tavertet","Tavèrnoles","Tona","Torelló","Vic","Vilanova de Sau"],
+  "Selva":["Fogars de la Selva"],
+  "Vallès Occidental":["Badia del Vallès","Barberà del Vallès","Castellar del Vallès","Castellbisbal","Cerdanyola del Vallès","Gallifa","Matadepera","Montcada i Reixac","Palau-solità i Plegamans","Polinyà","Rellinars","Ripollet","Rubí","Sabadell","Sant Cugat del Vallès","Sant Llorenç Savall","Sant Quirze del Vallès","Santa Perpètua de Mogoda","Sentmenat","Terrassa","Ullastrell","Vacarisses","Viladecavalls"],
+  "Vallès Oriental":["Ametlla del Vallès, l'","Bigues i Riells del Fai","Caldes de Montbui","Campins","Canovelles","Cardedeu","Cànoves i Samalús","Figaró-Montmany","Fogars de Montclús","Franqueses del Vallès, les","Garriga, la","Granollers","Gualba","Llagosta, la","Llinars del Vallès","Lliçà d'Amunt","Lliçà de Vall","Martorelles","Mollet del Vallès","Montmeló","Montornès del Vallès","Montseny","Parets del Vallès","Roca del Vallès, la","Sant Antoni de Vilamajor","Sant Celoni","Sant Esteve de Palautordera","Sant Feliu de Codines","Sant Fost de Campsentelles","Sant Pere de Vilamajor","Santa Eulàlia de Ronçana","Santa Maria de Martorelles","Santa Maria de Palautordera","Tagamanent","Vallgorguina","Vallromanes","Vilalba Sasserra","Vilanova del Vallès"]
+ },
+ "Girona":{
+  "Alt Empordà":["Agullana","Albanyà","Armentera, l'","Avinyonet de Puigventós","Biure","Boadella i les Escaules","Borrassà","Bàscara","Cabanelles","Cabanes","Cadaqués","Cantallops","Capmany","Castelló d'Empúries","Cistella","Colera","Darnius","Escala, l'","Espolla","Far d'Empordà, el","Figueres","Fortià","Garriguella","Garrigàs","Jonquera, la","Lladó","Llançà","Llers","Masarac i Vilarnadal","Maçanet de Cabrenys","Mollet de Peralada","Navata","Ordis","Palau de Santa Eulàlia","Palau-saverdera","Pau","Pedret i Marzà","Peralada","Pont de Molins","Pontós","Port de la Selva, el","Portbou","Rabós","Riumors","Roses","Sant Climent Sescebes","Sant Llorenç de la Muga","Sant Miquel de Fluvià","Sant Mori","Sant Pere Pescador","Santa Llogaia d'Àlguema","Saus, Camallera i Llampaies","Selva de Mar, la","Siurana","Terrades","Torroella de Fluvià","Vajol, la","Ventalló","Vila-sacra","Vilabertran","Viladamat","Vilafant","Vilajuïga","Vilamacolum","Vilamalla","Vilamaniscle","Vilanant","Vilaür"],
+  "Baix Empordà":["Albons","Begur","Bellcaire d'Empordà","Bisbal d'Empordà, la","Calonge i Sant Antoni","Castell d'Aro, Platja d'Aro i s'Agaró","Colomers","Corçà","Cruïlles, Monells i Sant Sadurní de l'Heura","Foixà","Fontanilles","Forallac","Garrigoles","Gualta","Jafre","Mont-ras","Palafrugell","Palamós i Sant Joan","Palau-sator","Pals","Parlavà","Pera, la","Regencós","Rupià","Sant Feliu de Guíxols","Santa Cristina d'Aro","Serra de Daró","Tallada d'Empordà, la","Torrent","Torroella de Montgrí","Ullastret","Ullà","Ultramort","Vall-llobrega","Verges","Vilopriu"],
+  "Cerdanya":["Alp","Bolvir","Das","Fontanals de Cerdanya","Ger","Guils de Cerdanya","Isòvol","Llívia","Meranges","Puigcerdà","Urús"],
+  "Garrotxa":["Argelaguer","Besalú","Beuda","Castellfollit de la Roca","Maià de Montcal","Mieres","Montagut i Oix","Olot","Planes d'Hostoles, les","Preses, les","Riudaura","Sales de Llierca","Sant Aniol de Finestres","Sant Feliu de Pallerols","Sant Ferriol","Sant Jaume de Llierca","Sant Joan les Fonts","Santa Pau","Tortellà","Vall d'en Bas, la","Vall de Bianya, la"],
+  "Gironès":["Aiguaviva","Bescanó","Bordils","Campllong","Canet d'Adri","Cassà de la Selva","Celrà","Cervià de Ter","Flaçà","Fornells de la Selva","Girona","Juià","Llagostera","Llambilles","Madremanya","Quart","Salt","Sant Andreu Salou","Sant Gregori","Sant Joan de Mollet","Sant Jordi Desvalls","Sant Julià de Ramis","Sant Martí Vell","Sant Martí de Llémena","Sarrià de Ter","Vilablareix","Viladasens"],
+  "Osona":["Espinelves","Vidrà","Viladrau"],
+  "Pla de l'Estany":["Banyoles","Camós","Cornellà del Terri","Crespià","Esponellà","Fontcoberta","Palol de Revardit","Porqueres","Sant Miquel de Campmajor","Serinyà","Vilademuls"],
+  "Ripollès":["Campdevànol","Campelles","Camprodon","Gombrèn","Llanars","Llosses, les","Molló","Ogassa","Pardines","Planoles","Queralbs","Ribes de Freser","Ripoll","Sant Joan de les Abadesses","Sant Pau de Segúries","Setcases","Toses","Vallfogona de Ripollès","Vilallonga de Ter"],
+  "Selva":["Amer","Anglès","Arbúcies","Blanes","Breda","Brunyola i Sant Martí Sapresa","Caldes de Malavella","Cellera de Ter, la","Hostalric","Lloret de Mar","Massanes","Maçanet de la Selva","Osor","Riells i Viabrea","Riudarenes","Riudellots de la Selva","Sant Feliu de Buixalleu","Sant Hilari Sacalm","Sant Julià del Llor i Bonmatí","Santa Coloma de Farners","Sils","Susqueda","Tossa de Mar","Vidreres","Vilobí d'Onyar"]
+ },
+ "Lleida":{
+  "Alt Urgell":["Alàs i Cerc","Arsèguel","Bassella","Cabó","Cava","Coll de Nargó","Estamariu","Fígols i Alinyà","Josa i Tuixén","Montferrer i Castellbò","Oliana","Organyà","Peramola","Pont de Bar, el","Ribera d'Urgellet","Seu d'Urgell, la","Valls d'Aguilar, les","Valls de Valira, les","Vansa i Fórnols, la"],
+  "Alta Ribagorça":["Pont de Suert, el","Vall de Boí, la","Vilaller"],
+  "Aran":["Arres","Bausen","Bossòst","Bòrdes, Es","Canejan","Les","Naut Aran","Vielha e Mijaran","Vilamòs"],
+  "Berguedà":["Gósol"],
+  "Cerdanya":["Bellver de Cerdanya","Lles de Cerdanya","Montellà i Martinet","Prats i Sansor","Prullans","Riu de Cerdanya"],
+  "Garrigues":["Albagés, l'","Albi, l'","Arbeca","Bellaguarda","Borges Blanques, les","Bovera","Castelldans","Cervià de les Garrigues","Cogul, el","Espluga Calba, l'","Floresta, la","Fulleda","Granadella, la","Granyena de les Garrigues","Juncosa","Juneda","Omellons, els","Pobla de Cérvoles, la","Puiggròs","Soleràs, el","Tarrés","Torms, els","Vilosell, el","Vinaixa"],
+  "Noguera":["Albesa","Algerri","Alòs de Balaguer","Artesa de Segre","Avellanes i Santa Linya, les","Balaguer","Baronia de Rialb, la","Bellcaire d'Urgell","Bellmunt d'Urgell","Cabanabona","Camarasa","Castelló de Farfanya","Cubells","Foradada","Ivars de Noguera","Menàrguens","Montgai","Oliola","Os de Balaguer","Penelles","Ponts","Preixens","Sentiu de Sió, la","Tiurana","Torrelameu","Térmens","Vallfogona de Balaguer","Vilanova de Meià","Vilanova de l'Aguda","Àger"],
+  "Pallars Jussà":["Abella de la Conca","Castell de Mur","Conca de Dalt","Gavet de la Conca","Isona i Conca Dellà","Llimiana","Pobla de Segur, la","Salàs de Pallars","Sant Esteve de la Sarga","Sarroca de Bellera","Senterada","Talarn","Torre de Cabdella, la","Tremp"],
+  "Pallars Sobirà":["Alins","Alt Àneu","Baix Pallars","Espot","Esterri d'Àneu","Esterri de Cardós","Farrera","Guingueta d'Àneu, la","Lladorre","Llavorsí","Rialp","Soriguera","Sort","Tírvia","Vall de Cardós"],
+  "Pla d'Urgell":["Barbens","Bell-lloc d'Urgell","Bellvís","Castellnou de Seana","Fondarella","Golmés","Ivars d'Urgell","Linyola","Miralcamp","Mollerussa","Palau d'Anglesola, el","Poal, el","Sidamon","Torregrossa","Vila-sana","Vilanova de Bellpuig"],
+  "Segarra":["Cervera","Estaràs","Granyanella","Granyena de Segarra","Guissona","Ivorra","Massoteres","Montoliu de Segarra","Montornès de Segarra","Oluges, les","Plans de Sió, els","Ribera d'Ondara","Sanaüja","Sant Guim de Freixenet","Sant Guim de la Plana","Sant Ramon","Talavera","Tarroja de Segarra","Torrefeta i Florejacs"],
+  "Segrià":["Aitona","Alamús, els","Albatàrrec","Alcanó","Alcarràs","Alcoletge","Alfarràs","Alfés","Alguaire","Almacelles","Almatret","Almenar","Alpicat","Artesa de Lleida","Aspa","Benavent de Segrià","Corbins","Gimenells i el Pla de la Font","Granja d'Escarp, la","Llardecans","Lleida","Maials","Massalcoreig","Montoliu de Lleida","Portella, la","Puigverd de Lleida","Rosselló","Sarroca de Lleida","Seròs","Soses","Sudanell","Sunyer","Torre-serona","Torrebesses","Torrefarrera","Torres de Segre","Vilanova de Segrià","Vilanova de la Barca"],
+  "Solsonès":["Biosca","Castellar de la Ribera","Clariana de Cardener","Coma i la Pedra, la","Guixers","Lladurs","Llobera","Molsosa, la","Navès","Odèn","Olius","Pinell de Solsonès","Pinós","Riner","Sant Llorenç de Morunys","Solsona","Torà"],
+  "Urgell":["Agramunt","Anglesola","Belianes","Bellpuig","Castellserà","Ciutadilla","Fuliola, la","Guimerà","Maldà","Nalec","Omells de na Gaia, els","Ossó de Sió","Preixana","Puigverd d'Agramunt","Sant Martí de Riucorb","Tornabous","Tàrrega","Vallbona de les Monges","Verdú","Vilagrassa"]
+ },
+ "Tarragona":{
+  "Alt Camp":["Aiguamúrcia","Alcover","Alió","Bràfim","Cabra del Camp","Figuerola del Camp","Garidells, els","Masó, la","Milà, el","Mont-ral","Montferri","Nulles","Pla de Santa Maria, el","Pont d'Armentera, el","Puigpelat","Querol","Riba, la","Rodonyà","Rourell, el","Vallmoll","Valls","Vila-rodona","Vilabella"],
+  "Baix Camp":["Albiol, l'","Aleixar, l'","Alforja","Almoster","Arbolí","Argentera, l'","Borges del Camp, les","Botarell","Cambrils","Capafonts","Castellvell del Camp","Colldejou","Duesaigües","Febró, la","Maspujols","Mont-roig del Camp","Montbrió del Camp","Prades","Pratdip","Reus","Riudecanyes","Riudecols","Riudoms","Selva del Camp, la","Vandellòs i l'Hospitalet de l'Infant","Vilanova d'Escornalbou","Vilaplana","Vinyols i els Arcs"],
+  "Baix Ebre":["Aldea, l'","Aldover","Alfara de Carles","Ametlla de Mar, l'","Ampolla, l'","Benifallet","Camarles","Deltebre","Paüls","Perelló, el","Roquetes","Tivenys","Tortosa","Xerta"],
+  "Baix Penedès":["Albinyana","Arboç, l'","Banyeres del Penedès","Bellvei","Bisbal del Penedès, la","Bonastre","Calafell","Cunit","Llorenç del Penedès","Masllorenç","Montmell, el","Sant Jaume dels Domenys","Santa Oliva","Vendrell, el"],
+  "Conca de Barberà":["Barberà de la Conca","Blancafort","Conesa","Espluga de Francolí, l'","Forès","Llorac","Montblanc","Passanant i Belltall","Piles, les","Pira","Pontils","Rocafort de Queralt","Santa Coloma de Queralt","Sarral","Savallà del Comtat","Senan","Solivella","Vallclara","Vallfogona de Riucorb","Vilanova de Prades","Vilaverd","Vimbodí i Poblet"],
+  "Montsià":["Alcanar","Amposta","Freginals","Galera, la","Godall","Mas de Barberans","Masdenverge","Ràpita, la","Sant Jaume d'Enveja","Santa Bàrbara","Sénia, la","Ulldecona"],
+  "Priorat":["Bellmunt del Priorat","Bisbal de Montsant, la","Cabacés","Capçanes","Cornudella de Montsant","Falset","Figuera, la","Gratallops","Guiamets, els","Lloar, el","Margalef","Marçà","Masroig, el","Molar, el","Morera de Montsant, la","Poboleda","Porrera","Pradell de la Teixeta","Torre de Fontaubella, la","Torroja del Priorat","Ulldemolins","Vilella Alta, la","Vilella Baixa, la"],
+  "Ribera d'Ebre":["Ascó","Benissanet","Flix","Garcia","Ginestar","Miravet","Móra d'Ebre","Móra la Nova","Palma d'Ebre, la","Rasquera","Riba-roja d'Ebre","Tivissa","Torre de l'Espanyol, la","Vinebre"],
+  "Tarragonès":["Altafulla","Canonja, la","Catllar, el","Constantí","Creixell","Morell, el","Nou de Gaià, la","Pallaresos, els","Perafort","Pobla de Mafumet, la","Pobla de Montornès, la","Renau","Riera de Gaià, la","Roda de Berà","Salomó","Salou","Secuita, la","Tarragona","Torredembarra","Vespella de Gaià","Vila-seca","Vilallonga del Camp"],
+  "Terra Alta":["Arnes","Batea","Bot","Caseres","Corbera d'Ebre","Fatarella, la","Gandesa","Horta de Sant Joan","Pinell de Brai, el","Pobla de Massaluca, la","Prat de Comte","Vilalba dels Arcs"]
+ }
+};
+var VIES=['Avinguda','Baixada','Camí','Carrer','Carreró','Carretera','Gran Via','Passatge','Passeig','Plaça','Polígon','Rambla','Ronda','Travessera','Travessia','Urbanització','Via'];
+var PAISOS=['Alemanya','Andorra','Argentina','Bèlgica','Brasil','Colòmbia','Estats Units','França','Itàlia','Marroc','Mèxic','Països Baixos','Portugal','Regne Unit','Romania','Suïssa','Uruguai','Xile','Xina'];
+var EXT_A='doc,docx,jpg,pdf,rar,tif,xls,xlsx,zip';
+var HINT_A="Tipus d'arxius admesos: .doc, .docx, .jpg, .pdf, .rar, .tif, .xls, .xlsx i .zip. Mida màxima 10.000 kB.";
+var DOCS=[
+ {id:'doc-memoria',req:true,t:'Memòria tècnica segons model normalitzat',ext:EXT_A,h:HINT_A},
+ {id:'doc-daci',req:true,t:"Declaració d'absència de conflicte d'interès d'entitats sol·licitants (DACI)",ext:'pdf',h:"Tipus d'arxius admesos: .pdf. Mida màxima 10.000 kB."},
+ {id:'doc-repr',t:"Documentació acreditativa de la representació amb què s'actua (només quan la signatura electrònica no ho acrediti o no es pugui consultar en un registre públic)",ext:EXT_A,h:HINT_A},
+ {id:'doc-scp',t:"Còpia de l'escriptura pública o contracte de constitució, en el cas de societats civils privades (SCP)",ext:EXT_A,h:HINT_A},
+ {id:'doc-prerrog',t:"Documentació acreditativa de prerrogativa especial negociada amb l'Administració per pròrroga, ajornament, moratòria, o altra condició especial en relació amb deutes tributaris i/o de Seg.Social",ext:EXT_A,h:HINT_A},
+ {id:'doc-corrent',t:"En cas de no autoritzar la consulta, documentació acreditativa d'estar al corrent del pagament de les obligacions tributàries amb les administracions públiques i davant la Seguretat Social",ext:EXT_A,h:HINT_A},
+ {id:'doc-oposicio',t:"En cas d'oposició a la consulta d'interoperabilitat, documentació acreditativa corresponent",ext:'jpg,docx,rar,zip,7z,pdf,tif',h:"Tipus d'arxius admesos: .jpg, .docx, .rar, .zip, .7z, .pdf i .tif. Mida màxima 10.000 kB."}
+];
+var FORM_TITLE="Sol·licitud de subvencions destinades a la realització de contractes formatius per a l'obtenció de pràctica professional, per a entitats privades. 2026";
+var TITLES={
+ perfil:FORM_TITLE,
+ acces:FORM_TITLE, login:'Inici de sessió', form:FORM_TITLE, aoc:'Signatura electrònica', ok:'Justificant de rebuda'
+};
+var KEY='soc2026-formulari-esborrany';
+var PKEY='soc2026-perfil';
+var perfil=(function(){try{return sessionStorage.getItem(PKEY)}catch(e){return null}})()||'sol·licitant';
+function setPerfil(p){perfil=p==='presentador/a'?p:'sol·licitant';try{sessionStorage.setItem(PKEY,perfil)}catch(e){}if(inited)applyPerfil()}
+function applyPerfil(){
+  $('#id-sol').hidden=perfil==='sol·licitant';
+  $$('[data-tipus-of]').forEach(function(b){
+    var r=$('input[name="'+b.dataset.tipusOf+'"]:checked'),jur=!!(r&&r.value==='juridica');
+    b.hidden=b.classList.contains('pers-jur')?!jur:jur;
+  });
+}
+function tipusOf(n){var r=$('input[name="'+n+'"]:checked');return r?r.value:'fisica'}
+/* Adreça electrònica de qui fa el tràmit: el presentador/a o bé la persona beneficiària */
+function mainEmail(){
+  if(perfil==='presentador/a')return tipusOf('sol_tipus')==='juridica'?$('#sr-email').value:$('#sf-email').value;
+  return tipusOf('ben_tipus')==='juridica'?$('#br-email').value:$('#bf-email').value;
+}
+function ident(f){
+  var J=function(a){return a.filter(Boolean).join(' ').trim()},U=function(v){return String(v||'').toUpperCase()};
+  function pers(t,n,rn,jn){
+    if(t==='juridica')return {nom:J([f[jn+'_rao_social']])+' ('+U(f[jn+'_ent_num_doc'])+')',rep:J([f[rn+'_nom'],f[rn+'_cognom1'],f[rn+'_cognom2']])+' ('+U(f[rn+'_num_doc'])+')',email:f[rn+'_email']};
+    return {nom:J([f[n+'_nom'],f[n+'_cognom1'],f[n+'_cognom2']])+' ('+U(f[n+'_num_doc'])+')',rep:'',email:f[n+'_email']};
+  }
+  var ben=pers(f.ben_tipus,'ben','benrep','ben');
+  if(perfil!=='presentador/a')return {ben:ben,sol:null};
+  return {ben:ben,sol:pers(f.sol_tipus,'sol','solrep','sol')};
+}
+
+/* ---------------- Utilitats ---------------- */
+function fillSelect(sel,items){sel.innerHTML='<option value=""></option>'+items.map(function(v){return '<option>'+esc(v)+'</option>'}).join('')}
+function fire(el){el.dispatchEvent(new Event('change',{bubbles:true}))}
+function fmtNum(n){var p=Math.abs(n).toFixed(2).split('.');return (n<0?'-':'')+p[0].replace(/\B(?=(\d{3})+(?!\d))/g,'.')+','+p[1]}
+function fmtEur(n){return fmtNum(n)+' €'}
+function parseImport(s){
+  s=String(s||'').replace(/[€\s]/g,'');
+  if(!s) return NaN;
+  if(s.indexOf(',')>=0) s=s.replace(/\./g,'').replace(',','.');
+  else if((s.match(/\./g)||[]).length>1||/\.\d{3}$/.test(s)) s=s.replace(/\./g,'');
+  if(!/^-?\d+(\.\d+)?$/.test(s)) return NaN;
+  return Number(s);
+}
+function pad(n){return (n<10?'0':'')+n}
+function nowStr(d){d=d||new Date();return pad(d.getDate())+'/'+pad(d.getMonth()+1)+'/'+d.getFullYear()+' '+pad(d.getHours())+':'+pad(d.getMinutes())+':'+pad(d.getSeconds())}
+function ibanOk(v){
+  v=v.replace(/\s/g,'').toUpperCase();
+  if(!/^[A-Z]{2}\d{2}[A-Z0-9]{10,30}$/.test(v)) return false;
+  if(v.slice(0,2)==='ES'&&v.length!==24) return false;
+  var r=v.slice(4)+v.slice(0,4),m=0;
+  for(var i=0;i<r.length;i++){var c=r[i];var n=/[A-Z]/.test(c)?c.charCodeAt(0)-55:+c;m=Number(String(m)+String(n))%97}
+  return m===1;
+}
+function docOk(tipus,v){
+  v=v.toUpperCase().replace(/[\s-]/g,'');
+  var L='TRWAGMYFPDXBNJZSQVHLCKE';
+  if(tipus==='NIF'){if(!/^\d{8}[A-Z]$/.test(v))return false;return L[+v.slice(0,8)%23]===v[8]}
+  if(tipus==='NIF entitat'){
+    if(/^[XYZ\d]/.test(v))return docOk(/^\d/.test(v)?'NIF':'NIE',v);
+    var m=/^([ABCDEFGHJNPQRSUVW])(\d{7})([0-9A-J])$/.exec(v);if(!m)return false;
+    var d=m[2],sum=0;for(var i=0;i<7;i++){var x=+d[i];if(i%2===0){x*=2;x=Math.floor(x/10)+x%10}sum+=x}
+    var c=(10-sum%10)%10,cl='JABCDEFGHI'[c],k=m[3];
+    if('KPQRSNW'.indexOf(m[1])>=0)return k===cl;
+    if('ABEH'.indexOf(m[1])>=0)return k===String(c);
+    return k===cl||k===String(c);
+  }
+  if(tipus==='NIE'){if(!/^[XYZ]\d{7}[A-Z]$/.test(v))return false;var n='XYZ'.indexOf(v[0])+v.slice(1,8);return L[+n%23]===v[8]}
+  return v.length>=5;
+}
+var toastT;
+function toast(msg){var t=$('#toast');t.textContent=msg;t.hidden=false;clearTimeout(toastT);toastT=setTimeout(function(){t.hidden=true},3200)}
+function loading(msg,ms,cb){var l=$('#loading');$('#loading-msg').textContent=msg;l.hidden=false;setTimeout(function(){l.hidden=true;cb()},ms)}
+function storeGet(){try{var s=localStorage.getItem(KEY);return s?JSON.parse(s):null}catch(e){return null}}
+function storeSet(d){try{localStorage.setItem(KEY,JSON.stringify(d));return true}catch(e){return false}}
+function storeDel(){try{localStorage.removeItem(KEY)}catch(e){}}
+
+/* ---------------- Pantalles ---------------- */
+var current=null;
+function show(name,push){
+  if(!TITLES[name]) name='perfil';
+  $$('.screen').forEach(function(s){s.hidden=s.dataset.screen!==name});
+  $$('.ov').forEach(function(o){o.hidden=true});
+  document.title=TITLES[name];
+  current=name;
+  window.scrollTo(0,0);
+  if(push!==false) history.pushState({s:name},'','#'+name);
+  if(name==='form') enterForm();
+}
+window.addEventListener('popstate',function(e){show((e.state&&e.state.s)||location.hash.slice(1)||'perfil',false)});
+document.addEventListener('click',function(e){
+  var g=e.target.closest('[data-go]');
+  if(g){e.preventDefault();if(g.dataset.perfil)setPerfil(g.dataset.perfil);show(g.dataset.go);return}
+  var o=e.target.closest('[data-open]');
+  if(o){$('#'+o.dataset.open).hidden=false;return}
+  var c=e.target.closest('[data-close]');
+  if(c){c.closest('.ov').hidden=true;return}
+  if(e.target.classList&&e.target.classList.contains('ov')){e.target.hidden=true}
+});
+document.addEventListener('keydown',function(e){if(e.key==='Escape'){$$('.ov').forEach(function(o){o.hidden=true});closeMs()}});
+
+/* Login */
+function doLogin(){loading('Validant la identificació...',900,function(){show('form')})}
+$('#btn-idcat').addEventListener('click',function(){
+  var d=$('#lg-doc'),t=$('#lg-tel');
+  if(!d.value.trim()){d.focus();d.style.borderColor='#c00000';return}
+  if(!t.value.trim()){t.focus();t.parentNode.style.borderColor='#c00000';return}
+  doLogin();
+});
+$('#lg-doc').addEventListener('input',function(){this.style.borderColor=''});
+$('#lg-tel').addEventListener('input',function(){this.parentNode.style.borderColor=''});
+$$('[data-login]').forEach(function(b){b.addEventListener('click',doLogin)});
+
+/* ---------------- Formulari: inicialització ---------------- */
+var step=1,maxStep=1,inited=false,ajuts=[],editIdx=-1;
+
+function initForm(){
+  $$('.adr').forEach(function(w){
+    fillSelect($('.geo-via',w),VIES);
+    fillSelect($('.geo-prov',w),Object.keys(GEO).sort(cmp));
+    fillSelect($('.geo-pais',w),PAISOS);
+    refreshGeo(w,'');
+    $('.geo-prov',w).addEventListener('change',function(){refreshGeo(w,'prov')});
+    $('.geo-mun',w).addEventListener('change',function(){refreshGeo(w,'mun')});
+    $('.adr-chk',w).addEventListener('change',function(){$('.adr-es',w).hidden=this.checked;$('.adr-ext',w).hidden=!this.checked});
+  });
+  $$('input[name=ben_tipus],input[name=sol_tipus]').forEach(function(r){r.addEventListener('change',applyPerfil)});
+  $$('input[name=contacte]').forEach(function(r){r.addEventListener('change',function(){$('#contacte-block').hidden=$('input[name=contacte]:checked').value!=='SI'})});
+  $$('input[name=altres_ajuts]').forEach(function(r){r.addEventListener('change',function(){$('#ajuts-block').hidden=$('input[name=altres_ajuts]:checked').value!=='Si'})});
+
+  /* Documents */
+  $('#docs').innerHTML=DOCS.map(function(d){
+    return '<div class="doc fld" id="'+d.id+'" data-kind="file"'+(d.req?' data-req':'')+' data-ext="'+d.ext+'">'+
+      '<div class="lbl">'+esc(d.t)+(d.req?' <span class="req">*</span>':'')+'</div>'+
+      '<div class="fbox"><span class="file-name"></span><button type="button" class="file-del" title="Elimina l\'arxiu" hidden>&times;</button>'+
+      '<button type="button" class="btn-adj">Adjunta</button><input type="file" hidden accept="'+d.ext.split(',').map(function(x){return '.'+x}).join(',')+'"></div>'+
+      '<div class="hint">'+esc(d.h)+'</div></div>';
+  }).join('');
+  $$('.doc').forEach(function(f){
+    var inp=$('input[type=file]',f);
+    $('.btn-adj',f).addEventListener('click',function(){inp.click()});
+    $('.fbox',f).addEventListener('click',function(e){if(e.target===this||e.target.classList.contains('file-name'))inp.click()});
+    inp.addEventListener('change',function(){
+      var file=inp.files[0];if(!file)return;
+      var ext=file.name.split('.').pop().toLowerCase();
+      if(f.dataset.ext.split(',').indexOf(ext)<0){setErr(f,"El tipus d'arxiu no està admès.");inp.value='';return}
+      if(file.size>10000*1024){setErr(f,"L'arxiu supera la mida màxima de 10.000 kB.");inp.value='';return}
+      setFile(f,file.name,file.size);clrErr(f);inp.value='';
+    });
+    $('.file-del',f).addEventListener('click',function(){setFile(f,'',0)});
+  });
+
+  /* Accions */
+  addAccio();
+  $('#btn-afegir').addEventListener('click',function(){
+    var last=$$('.accio').pop();
+    if(validateIn(last)){showAlert(true);return}
+    showAlert(false);
+    if($$('.accio').length>=3){toast("Es poden sol·licitar com a màxim 3 contractes.");return}
+    var n=addAccio();
+    n.scrollIntoView({behavior:'smooth',block:'start'});
+  });
+
+  /* Multiselecció de línies */
+  var ms=$('#ms-linies'),box=$('.ms-box',ms),list=$('.ms-list',ms),hid=$('#f-linies');
+  function syncMs(){
+    var v=hid.value?hid.value.split('|'):[];
+    $$('.ms-opt',ms).forEach(function(o){o.classList.toggle('sel',v.indexOf(o.dataset.v)>=0)});
+    box.textContent=v.join(', ');
+  }
+  box.addEventListener('click',function(){var open=list.hidden;closeMs();list.hidden=!open;box.classList.toggle('open',open)});
+  box.addEventListener('keydown',function(e){if(e.key==='Enter'||e.key===' '){e.preventDefault();box.click()}});
+  $$('.ms-opt',ms).forEach(function(o){o.addEventListener('click',function(){
+    var v=hid.value?hid.value.split('|'):[];var i=v.indexOf(o.dataset.v);
+    if(i>=0)v.splice(i,1);else v.push(o.dataset.v);
+    var order=$$('.ms-opt',ms).map(function(x){return x.dataset.v});
+    v.sort(function(a,b){return order.indexOf(a)-order.indexOf(b)});
+    hid.value=v.join('|');syncMs();
+  })});
+  hid.addEventListener('change',syncMs);
+  document.addEventListener('click',function(e){if(!e.target.closest('#ms-linies'))closeMs()});
+
+  /* Taula d'ajuts */
+  renderAjuts();
+  $('#ajut-add').addEventListener('click',function(){openAjut(-1)});
+  $('#ajuts-body').addEventListener('click',function(e){
+    var b=e.target.closest('[data-edit]');if(b){openAjut(+b.dataset.edit);return}
+    var d=e.target.closest('[data-delajut]');if(d){ajuts.splice(+d.dataset.delajut,1);renderAjuts()}
+  });
+  $('#ajut-ok').addEventListener('click',function(){
+    var dlg=$('#dlg-ajut');
+    if(validateIn(dlg))return;
+    var a={inst:$('#aj-inst').value.trim(),tipus:$('#aj-tipus').value,obj:$('#aj-obj').value.trim(),imp:parseImport($('#aj-imp').value)};
+    if(editIdx>=0)ajuts[editIdx]=a;else ajuts.push(a);
+    dlg.hidden=true;renderAjuts();
+    var f=$('#ajuts-block .fld');if(f)clrErr(f);
+  });
+
+  /* IBAN */
+  var boxes=$$('.iban-box');
+  boxes.forEach(function(b,i){
+    b.addEventListener('input',function(){
+      var v=b.value.toUpperCase().replace(/[^A-Z0-9]/g,'');
+      if(b.value!==v)b.value=v;
+      if(i>0&&v.length>=4&&boxes[i+1])boxes[i+1].focus();
+    });
+  });
+  function distribute(){
+    var v=boxes[0].value.toUpperCase().replace(/[^A-Z0-9]/g,'');
+    if(v.length>4){for(var i=0;i<6;i++)boxes[i].value=v.substr(i*4,4)}
+  }
+  boxes[0].addEventListener('blur',distribute);
+  boxes[0].addEventListener('paste',function(){setTimeout(function(){if(boxes[0].value.length>4){distribute()}},0)});
+
+  /* Imports */
+  document.addEventListener('blur',function(e){
+    if(e.target.classList&&e.target.classList.contains('imp')){
+      var n=parseImport(e.target.value);if(!isNaN(n))e.target.value=fmtEur(n);
+    }
+  },true);
+
+  /* Caselles excloents */
+  $$('[data-excl]').forEach(function(c){c.addEventListener('change',function(){
+    if(c.checked)$$('[data-excl="'+c.dataset.excl+'"]').forEach(function(o){if(o!==c)o.checked=false});
+  })});
+
+  /* Protecció de dades */
+  $('#pd-tog').addEventListener('click',function(){
+    var open=this.getAttribute('aria-expanded')==='true';
+    this.setAttribute('aria-expanded',String(!open));$('#pd-info').hidden=open;
+  });
+
+  /* Navegació */
+  $$('.stp').forEach(function(b){b.addEventListener('click',function(){var n=+b.dataset.stp;if(n<=maxStep&&n!==step){showAlert(false);goStep(n)}})});
+  $$('[data-next]').forEach(function(b){b.addEventListener('click',function(){
+    var first=validateIn($('.step[data-step="'+step+'"]'));
+    if(first){showAlert(true);focusErr(first);return}
+    showAlert(false);goStep(step+1);
+  })});
+  $$('[data-prev]').forEach(function(b){b.addEventListener('click',function(){showAlert(false);goStep(step-1)})});
+
+  /* Esborrany */
+  $$('[data-open-desa]').forEach(function(b){b.addEventListener('click',function(){
+    var d=storeGet();
+    $('#desa-email').value=mainEmail()||(d&&d.email)||'';
+    $('#dlg-desa').hidden=false;
+  })});
+  $('#desa-ok').addEventListener('click',function(){
+    var d=collect();d.email=$('#desa-email').value.trim();
+    $('#dlg-desa').hidden=true;
+    if(storeSet(d))toast("L'esborrany s'ha desat correctament.");
+    else toast("No s'ha pogut desar l'esborrany en aquest navegador.");
+  });
+  $('#draft-discard').addEventListener('click',function(){storeDel();location.hash='#form';location.reload()});
+
+  /* Signa i envia */
+  $('#btn-signa').addEventListener('click',function(){
+    for(var n=1;n<=5;n++){
+      var s=$('.step[data-step="'+n+'"]'),wasHidden=s.hidden;s.hidden=false;
+      var first=validateIn(s);s.hidden=wasHidden;
+      if(first){showAlert(true);goStep(n,true);focusErr(first);return}
+    }
+    showAlert(false);
+    loading('Preparant el document per signar...',900,function(){show('aoc')});
+  });
+
+  /* Neteja d'errors en escriure */
+  function liveClear(e){var f=e.target.closest&&e.target.closest('.fld.err');if(f&&!checkFld(f))clrErr(f)}
+  document.addEventListener('input',liveClear);
+  document.addEventListener('change',liveClear);
+}
+
+/* Província i municipi: sense província es mostren tots els municipis;
+   en triar un municipi s'omple automàticament la província. */
+var MUNS=[];
+Object.keys(GEO).forEach(function(p){Object.keys(GEO[p]).forEach(function(c){GEO[p][c].forEach(function(m){MUNS.push({p:p,m:m})})})});
+function uniq(a){return a.filter(function(v,i){return a.indexOf(v)===i})}
+function refreshGeo(w,changed){
+  var P=$('.geo-prov',w),M=$('.geo-mun',w);
+  var p=P.value,m=M.value,hit;
+  if(changed==='mun'&&m){hit=MUNS.filter(function(x){return x.m===m})[0];if(hit)p=hit.p}
+  if(changed==='prov'&&m&&!MUNS.some(function(x){return x.p===p&&x.m===m}))m='';
+  var muns=uniq(MUNS.filter(function(x){return !p||x.p===p}).map(function(x){return x.m})).sort(cmp);
+  P.value=p;fillSelect(M,muns);M.value=m;
+  [P,M].forEach(function(el){var f=el.closest('.fld.err');if(f&&el.value)clrErr(f)});
+}
+
+function closeMs(){var l=$('#ms-linies .ms-list');if(l){l.hidden=true;$('#ms-linies .ms-box').classList.remove('open')}}
+
+function addAccio(){
+  var wrap=$('#accions'),n=$$('.accio',wrap).length+1;
+  var node=$('#tpl-accio').content.firstElementChild.cloneNode(true);
+  $('.accio-n',node).textContent=n;
+  $$('[data-k]',node).forEach(function(el){el.name='accio'+n+'_'+el.dataset.k;el.id='a'+n+'-'+el.dataset.k;var l=el.parentNode.querySelector('label');if(l)l.htmlFor=el.id});
+  if(n>1){var del=$('[data-del-accio]',node);del.hidden=false;del.addEventListener('click',function(){node.remove();renumberAccions()})}
+  wrap.appendChild(node);
+  return node;
+}
+function renumberAccions(){
+  $$('.accio').forEach(function(a,i){
+    var n=i+1;$('.accio-n',a).textContent=n;
+    $$('[data-k]',a).forEach(function(el){el.name='accio'+n+'_'+el.dataset.k;el.id='a'+n+'-'+el.dataset.k;var l=el.parentNode.querySelector('label');if(l)l.htmlFor=el.id});
+  });
+}
+
+function renderAjuts(){
+  var body=$('#ajuts-body');
+  var pencil='<svg width="20" height="20"><use href="#i-pencil"/></svg>';
+  if(!ajuts.length){
+    body.innerHTML='<tr><td class="c1"><button class="ic-btn" type="button" data-edit="-1" title="Edita">'+pencil+'</button><span class="cell-t dash">-</span></td><td><div class="gbox"></div></td><td><span class="dash" style="margin-left:10px">-</span></td><td class="r" style="padding-right:96px"><span class="dash">-</span></td></tr>';
+  } else {
+    body.innerHTML=ajuts.map(function(a,i){
+      return '<tr><td class="c1"><div class="c1f"><button class="ic-btn" type="button" data-edit="'+i+'" title="Edita">'+pencil+'</button><button class="ic-btn" type="button" data-delajut="'+i+'" title="Elimina"><svg width="20" height="20"><use href="#i-trash"/></svg></button><span style="margin-left:8px">'+esc(a.inst)+'</span></div></td>'+
+        '<td><div class="gbox">'+esc(a.tipus)+'</div></td><td style="padding-left:20px">'+esc(a.obj)+'</td><td class="r">'+fmtEur(a.imp)+'</td></tr>';
+    }).join('');
+  }
+  var tot=ajuts.reduce(function(s,a){return s+(isNaN(a.imp)?0:a.imp)},0);
+  $('#ajuts-total').textContent=fmtEur(tot);
+}
+function openAjut(i){
+  editIdx=i;var a=i>=0?ajuts[i]:{inst:'',tipus:'',obj:'',imp:NaN};
+  $('#aj-inst').value=a.inst;$('#aj-tipus').value=a.tipus;$('#aj-obj').value=a.obj;$('#aj-imp').value=isNaN(a.imp)?'':fmtEur(a.imp);
+  $$('#dlg-ajut .fld').forEach(clrErr);
+  $('#dlg-ajut').hidden=false;$('#aj-inst').focus();
+}
+
+function setFile(f,name,size){
+  f.dataset.fileName=name||'';f.dataset.fileSize=size||0;
+  $('.file-name',f).textContent=name?name+' ('+Math.max(1,Math.ceil(size/1024)).toLocaleString('de-DE')+' kB)':'';
+  $('.file-del',f).hidden=!name;
+}
+
+/* ---------------- Passos ---------------- */
+function renderStepper(){
+  $$('.stp').forEach(function(el){
+    var n=+el.dataset.stp;
+    el.classList.toggle('active',n===step);
+    el.classList.toggle('visited',n!==step&&n<=maxStep);
+    if(n===step)el.setAttribute('aria-current','step');else el.removeAttribute('aria-current');
+  });
+}
+function goStep(n,keepScroll){
+  step=Math.max(1,Math.min(5,n));if(step>maxStep)maxStep=step;
+  $$('.step').forEach(function(s){s.hidden=+s.dataset.step!==step});
+  renderStepper();closeMs();
+  if(!keepScroll)window.scrollTo(0,0);
+}
+function showAlert(on){$('#alert-err').hidden=!on}
+function focusErr(f){
+  setTimeout(function(){f.scrollIntoView({block:'center'});var c=f.querySelector('input:not([type=hidden]):not([type=file]),select,textarea,.ms-box,.btn-adj');if(c)try{c.focus({preventScroll:true})}catch(e){}},0);
+}
+
+/* ---------------- Validació ---------------- */
+var MSG_REQ='Aquest camp és obligatori.';
+function isVisible(el){return !!(el.offsetWidth||el.offsetHeight||el.getClientRects().length)}
+function setErr(f,msg){
+  f.classList.add('err');
+  var m=null;for(var i=0;i<f.children.length;i++){if(f.children[i].classList.contains('err-msg'))m=f.children[i]}
+  if(!m){m=document.createElement('div');m.className='err-msg';f.appendChild(m)}
+  m.textContent=msg;
+}
+function clrErr(f){
+  f.classList.remove('err');
+  for(var i=f.children.length-1;i>=0;i--){if(f.children[i].classList.contains('err-msg'))f.removeChild(f.children[i])}
+}
+function checkFld(f){
+  var kind=f.dataset.kind||'',req=f.hasAttribute('data-req'),val='';
+  if(kind==='radio'){var c=f.querySelector('input[type=radio]:checked');val=c?c.value:''}
+  else if(kind==='check'){val=f.querySelector('input[type=checkbox]').checked?'1':''}
+  else if(kind==='file'){val=f.dataset.fileName||''}
+  else if(kind==='iban'){val=$$('.iban-box',f).map(function(i){return i.value.trim()}).join('')}
+  else if(kind==='ajuts'){if(req&&!ajuts.length)return "Cal informar com a mínim un ajut.";return ''}
+  else{var el=f.querySelector('input:not([type=checkbox]):not([type=radio]):not([type=file]),select,textarea');if(!el)return '';val=el.value.trim()}
+  if(!val)return req?MSG_REQ:'';
+  var t=f.dataset.type;
+  if(t==='email'&&!/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(val))return "L'adreça electrònica no és vàlida.";
+  if(t==='cp'&&!/^\d{5}$/.test(val))return 'El codi postal ha de tenir 5 xifres.';
+  if(t==='tel'&&!/^\d{9}$/.test(val.replace(/\s/g,'')))return 'El telèfon ha de tenir 9 xifres.';
+  if(t==='iban'&&!ibanOk(val))return "L'IBAN no és vàlid.";
+  if(t==='import'&&!(parseImport(val)>0))return "L'import no és vàlid.";
+  if(t==='doc'){var tp=$('#'+f.dataset.docFrom).value;if(tp&&!docOk(tp,val))return "El número d'identificació no és vàlid."}
+  return '';
+}
+function validateIn(root){
+  var first=null;
+  $$('.fld',root).forEach(function(f){
+    if(!isVisible(f)){clrErr(f);return}
+    var msg=checkFld(f);
+    if(msg){setErr(f,msg);if(!first)first=f}else clrErr(f);
+  });
+  return first;
+}
+
+/* ---------------- Esborrany ---------------- */
+function collect(){
+  var d={perfil:perfil,fields:{},accions:$$('.accio').length,ajuts:ajuts,files:{},step:step,maxStep:maxStep,saved:new Date().toISOString()};
+  $$('#s-form [name]').forEach(function(el){
+    if(el.type==='file')return;
+    if(el.type==='radio'){if(el.checked)d.fields[el.name]=el.value}
+    else if(el.type==='checkbox')d.fields[el.name]=el.checked;
+    else d.fields[el.name]=el.value;
+  });
+  $$('.doc').forEach(function(f){if(f.dataset.fileName)d.files[f.id]={name:f.dataset.fileName,size:+f.dataset.fileSize}});
+  return d;
+}
+function restore(d){
+  /* El perfil triat a la pantalla inicial té prioritat sobre el de l'esborrany */
+  var triat=null;try{triat=sessionStorage.getItem(PKEY)}catch(e){}
+  if(d.perfil&&!triat)perfil=d.perfil;
+  while($$('.accio').length<(d.accions||1))addAccio();
+  $$('#s-form [name]').forEach(function(el){
+    if(!(el.name in d.fields))return;
+    var v=d.fields[el.name];
+    if(el.type==='radio'){if(v===el.value){el.checked=true;fire(el)}}
+    else if(el.type==='checkbox'){el.checked=!!v;fire(el)}
+    else{el.value=v;fire(el)}
+  });
+  ajuts=(d.ajuts||[]).map(function(a){return {inst:a.inst,tipus:a.tipus,obj:a.obj,imp:a.imp==null?NaN:a.imp}});renderAjuts();
+  Object.keys(d.files||{}).forEach(function(id){var f=$('#'+id);if(f)setFile(f,d.files[id].name,d.files[id].size)});
+  maxStep=d.maxStep||1;goStep(d.step||1);
+  $('#draft-date').textContent=nowStr(new Date(d.saved));
+  $('#draft-note').hidden=false;
+}
+function enterForm(){
+  if(inited)return;
+  inited=true;initForm();
+  var d=storeGet();
+  if(d&&d.fields)restore(d);else goStep(1);
+  applyPerfil();
+}
+
+/* ---------------- Signatura i justificant ---------------- */
+var registre=null;
+$('#btn-signar').addEventListener('click',function(){
+  loading('Signant i enviant el formulari...',1600,function(){
+    var id=String(200000+Math.floor(Math.random()*99999));
+    var now=new Date();
+    registre={id:id,re:'9071 - '+(10000000+Math.floor(Math.random()*999999))+' / '+now.getFullYear(),rs:'191380-'+id,data:nowStr(now),dades:collect()};
+    $('#ok-id').textContent=registre.id;$('#ok-re').textContent=registre.re;$('#ok-rs').textContent=registre.rs;$('#ok-data').textContent=registre.data;
+    storeDel();
+    show('ok');
+  });
+});
+$('#ok-rebut').addEventListener('click',function(){
+  if(!registre)return;
+  var f=registre.dades.fields,I=ident(f),docs=$$('.doc').filter(function(d){return d.dataset.fileName}).map(function(d){return '<li>'+esc($('.lbl',d).textContent.replace(/\s*\*$/,''))+': <b>'+esc(d.dataset.fileName)+'</b></li>'}).join('');
+  var w=window.open('','_blank');
+  if(!w){toast("Permet les finestres emergents per descarregar el rebut.");return}
+  w.document.write('<!doctype html><html lang="ca"><head><meta charset="utf-8"><title>Rebut de registre '+esc(registre.rs)+'</title><style>body{font-family:Arial,Helvetica,sans-serif;color:#222;max-width:760px;margin:40px auto;padding:0 20px;font-size:14px;line-height:1.5}h1{font-size:20px;border-bottom:2px solid #c00000;padding-bottom:8px}table{border-collapse:collapse;width:100%;margin:16px 0}td{border:1px solid #ccc;padding:6px 10px;vertical-align:top}td:first-child{background:#f5f5f5;width:38%;font-weight:bold}button{background:#c00000;color:#fff;border:0;padding:8px 16px;font-size:14px;cursor:pointer}@media print{button{display:none}}</style></head><body>'+
+    '<p><b>Generalitat de Catalunya</b><br>Servei Públic d\'Ocupació de Catalunya</p><h1>Rebut de registre</h1>'+
+    '<table><tr><td>Tràmit</td><td>'+esc(FORM_TITLE)+'</td></tr><tr><td>Id tràmit</td><td>'+esc(registre.id)+'</td></tr><tr><td>Id servei</td><td>191380</td></tr><tr><td>Registre d\'entrada</td><td>'+esc(registre.re)+'</td></tr><tr><td>Registre de sortida</td><td>'+esc(registre.rs)+'</td></tr><tr><td>Data de registre</td><td>'+esc(registre.data)+'</td></tr>'+
+    (I.sol?'<tr><td>Presentador/a</td><td>'+esc(I.sol.nom)+'</td></tr>'+(I.sol.rep?'<tr><td>Representant del presentador/a</td><td>'+esc(I.sol.rep)+'</td></tr>':'')+'<tr><td>Adreça electrònica del presentador/a</td><td>'+esc(I.sol.email)+'</td></tr>':'')+
+    '<tr><td>Persona o entitat beneficiària</td><td>'+esc(I.ben.nom)+'</td></tr>'+(I.ben.rep?'<tr><td>Persona representant</td><td>'+esc(I.ben.rep)+'</td></tr>':'')+'<tr><td>Adreça electrònica</td><td>'+esc(I.ben.email)+'</td></tr>'+'<tr><td>Contractes sol·licitats</td><td>'+registre.dades.accions+'</td></tr></table>'+
+    (docs?'<p><b>Documentació adjunta</b></p><ul>'+docs+'</ul>':'')+
+    '<p><button onclick="print()">Imprimeix / Desa en PDF</button></p></body></html>');
+  w.document.close();
+});
+$('.cert').addEventListener('keydown',function(e){if(e.key==='Enter')$('#btn-signar').click()});
+
+/* Enllaços sense destinació (pàgines no incloses en la pràctica) */
+document.addEventListener('click',function(e){var a=e.target.closest('[data-inert]');if(a)e.preventDefault()},true);
+
+/* ---------------- Inici ---------------- */
+var start=location.hash.slice(1);
+if(start==='aoc'||start==='ok')start='form';
+if(!TITLES[start])start='perfil';
+history.replaceState({s:start},'','#'+start);
+show(start,false);
+})();
+</script>
+</body>
+</html>
