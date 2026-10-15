@@ -1376,7 +1376,7 @@ $('#ok-rebut').addEventListener('click',function(){
     (I.sol?'<tr><td>Presentador/a</td><td>'+esc(I.sol.nom)+'</td></tr>'+(I.sol.rep?'<tr><td>Representant del presentador/a</td><td>'+esc(I.sol.rep)+'</td></tr>':'')+'<tr><td>Adreça electrònica del presentador/a</td><td>'+esc(I.sol.email)+'</td></tr>':'')+
     '<tr><td>Persona o entitat beneficiària</td><td>'+esc(I.ben.nom)+'</td></tr>'+(I.ben.rep?'<tr><td>Persona representant</td><td>'+esc(I.ben.rep)+'</td></tr>':'')+'<tr><td>Adreça electrònica</td><td>'+esc(I.ben.email)+'</td></tr>'+'<tr><td>Contractes sol·licitats</td><td>'+registre.dades.accions+'</td></tr></table>'+
     (docs?'<p><b>Documentació adjunta</b></p><ul>'+docs+'</ul>':'')+
-    '<p><button onclick="print()">Imprimeix / Desa en PDF</button></p></body></html>');
+    '<p><button onclick="print()">Imprimeix / Desa en PDF</button></p><\/body><\/html>');
   w.document.close();
 });
 $('.cert').addEventListener('keydown',function(e){if(e.key==='Enter')$('#btn-signar').click()});
